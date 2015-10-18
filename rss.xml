@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[If you see no reason for giving thanks, the fault lies only in yourself]]></title>
+        <description><![CDATA[If you see no reason for giving thanks, the fault lies only in yourself]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>The Grid</generator>
+        <lastBuildDate>Sun, 18 Oct 2015 01:17:14 GMT</lastBuildDate>
+        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Naming the Beginning]]></title>
+            <description><![CDATA[<h1>Naming the Beginning</h1>]]></description>
+            <link>undefinednaming-the-beginning/index.html</link>
+            <guid isPermaLink="false">9cf940b5-87ca-4794-b2ec-47cce32cbc97</guid>
+            <pubDate>Sun, 18 Oct 2015 01:16:45 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
