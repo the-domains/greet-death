@@ -2,14 +2,35 @@
     <channel>
         <title><![CDATA[If you see no reason for giving thanks, the fault lies only in yourself]]></title>
         <description><![CDATA[If you see no reason for giving thanks, the fault lies only in yourself]]></description>
-        <link>http://github.com/dylang/node-rss</link>
+        <link>https://thegrid.ai/greet-death/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Sun, 18 Oct 2015 01:17:14 GMT</lastBuildDate>
-        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Wed, 04 Nov 2015 13:37:55 GMT</lastBuildDate>
+        <atom:link href="https://thegrid.ai/greet-death/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[To be known and understood]]></title>
+            <description><![CDATA[<article><h1>To be known and understood</h1><p>Bricks, bullshit and boards</p></article>]]></description>
+            <link>https://thegrid.ai/greet-death/to-be-known-and-understood/index.html</link>
+            <guid isPermaLink="false">f37209e9-fbf1-4d13-b3ac-fa84b461454c</guid>
+            <pubDate>Tue, 03 Nov 2015 12:05:29 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[I am. I do.]]></title>
+            <description><![CDATA[<article><h1>I am. I do.</h1><p>The only logical choice is to out-fuck the fuckers who are trying to fuck you.</p></article>]]></description>
+            <link>https://thegrid.ai/greet-death/i-am-i-do/index.html</link>
+            <guid isPermaLink="false">a7a4321b-f117-4a51-9715-3eb29df6c821</guid>
+            <pubDate>Mon, 02 Nov 2015 12:46:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Kale and goat's cheese salad]]></title>
+            <description><![CDATA[<article><h1>Kale and goat's cheese salad</h1><p>You don't deserve to be loved enough to have kale, you don't even deserve fresh vegetables</p></article>]]></description>
+            <link>https://thegrid.ai/greet-death/kale-and-goats-cheese-salad/index.html</link>
+            <guid isPermaLink="false">14eaea0d-49bf-4d71-8d84-3acf39fdb942</guid>
+            <pubDate>Wed, 04 Nov 2015 13:37:27 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Naming the Beginning]]></title>
             <description><![CDATA[<h1>Naming the Beginning</h1>]]></description>
-            <link>undefinednaming-the-beginning/index.html</link>
+            <link>https://thegrid.ai/greet-death/naming-the-beginning/index.html</link>
             <guid isPermaLink="false">9cf940b5-87ca-4794-b2ec-47cce32cbc97</guid>
             <pubDate>Sun, 18 Oct 2015 01:16:45 GMT</pubDate>
         </item>
