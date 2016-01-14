@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>Naming the Beginning - Greet Death</title><link href="../rss.xml" title="If you see no reason for giving thanks, the fault lies only in yourself feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.16.22"><meta name="the-grid-solution" content="ed80fe5f-806c-4210-b47f-e9c082d2a761"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
+<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>Naming the Beginning - Greet Death</title><link href="../rss.xml" title="If you see no reason for giving thanks, the fault lies only in yourself feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.3"><meta name="the-grid-solution" content="aae7fbff-f93e-43a6-bf5c-fc4e01d9a238"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
 @media (min-width: 15.6875em)and (max-width: 15.75em){	html{font-size:3.28125em !important}}
 @media (min-width: 15.8125em)and (max-width: 16.25em){	html{font-size:3.375em !important}}
 @media (min-width: 16.3125em)and (max-width: 16.6875em){html{font-size:3.46875em !important}}
@@ -202,6 +202,14 @@ body {
 }
 .stack {
   z-index: 1;
+  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+}
+.group,
+.aside,
+.decoration {
+  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
 }
 picture {
   display: inline-block;
@@ -250,6 +258,9 @@ a:active {
   transition: color 0.1s ease-in, background-color 0.1s ease-out;
   -webkit-transition: color 0.1s ease-in, background-color 0.1s ease-out;
 }
+a.aside {
+  display: inline-block;
+}
 html.exporting a {
   transition: none;
 }
@@ -259,11 +270,21 @@ html.exporting a {
 .media > a {
   display: inline-block;
 }
+.media iframe {
+  transition: 0.3s opacity ease-in;
+  -webkit-transition: 0.3s opacity ease-in;
+}
 h1 a,
 h2 a,
 h3 a {
   font-weight: inherit;
   letter-spacing: inherit;
+}
+a {
+  -webkit-box-decoration-break: clone;
+  -ms-box-decoration-break: clone;
+  -moz-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .text-decoration {
   -webkit-box-decoration-break: clone;
@@ -277,36 +298,50 @@ h3 a {
   margin-left: 1.5em;
 }
 .decoration {
-  position: relative;
   pointer-events: none;
+}
+.svg {
+  position: relative;
   background-color: currentColor;
 }
-.decoration > svg {
+.svg > svg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.decoration.connector > svg {
+.svg.connector > svg {
   width: 109%;
   height: 109%;
   margin-left: -2%;
 }
-.decoration path,
-.decoration ellipse,
-.decoration rect,
-.decoration polygon,
-.decoration circle {
+.svg path,
+.svg ellipse,
+.svg rect,
+.svg polygon,
+.svg circle {
   fill: currentColor;
 }
-.decoration mpath,
-.decoration line,
-.decoration polyline {
+.svg mpath,
+.svg line,
+.svg polyline {
   stroke: currentColor;
 }
-.svg.decoration {
+.svg {
   background-color: transparent;
+}
+.revealed .play.svg:after {
+  display: block;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -20px;
+  background-color: currentColor;
+  content: "";
 }
 .colors-style-aside-border .publisher,
 .colors-style-aside-border .author {
@@ -318,8 +353,11 @@ h3 a {
 .decoration {
   z-index: 3;
 }
-.heading ul {
+.panel ul {
   list-style-type: none !important;
+}
+ul {
+  list-style-position: inside;
 }
 .panel .heading {
   text-transform: uppercase;
@@ -417,8 +455,8 @@ h3 a {
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav{font-size: 0.164rem; line-height: 0.204rem; height: 1.134rem; width: 4.804rem; position: absolute; top: 0rem; left: 0rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav:before{}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav >.group.heading { text-align: center; }
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.964rem; width: 4.804rem; position: absolute; top: 0.094rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 4.324rem; position: absolute; top: 0rem; left: 0.244rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.964rem; width: 4.564rem; position: absolute; top: 0.094rem; left: 0.124rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 4.324rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav a { color: rgb(196, 146, 69); }
@@ -456,11 +494,11 @@ h3 a {
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-2-l-one#u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-2-l-one { background-color: rgb(226, 201, 162); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-3#u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-3{position: relative;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-3-l-one#u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-3-l-one{position: relative; display: block; width: 4.804rem; height: 1.254rem; top: 0rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 1.134rem; width: 4.684rem; position: absolute; top: 17.304rem; left: 0.064rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 1.134rem; width: 4.684rem; position: absolute; top: 17.294rem; left: 0.064rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate:before{}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate >.group.heading { text-align: center; }
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.964rem; width: 4.684rem; position: absolute; top: 0.094rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 4.324rem; position: absolute; top: 0rem; left: 0.184rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.964rem; width: 4.444rem; position: absolute; top: 0.094rem; left: 0.124rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 4.204rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate a { color: rgb(196, 146, 69); }
@@ -489,8 +527,8 @@ display: none;
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav{font-size: 0.164rem; line-height: 0.204rem; height: 0.904rem; width: 7.204rem; position: absolute; top: 0rem; left: 0rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav:before{}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav >.group.heading { text-align: center; }
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.644rem; width: 7.204rem; position: absolute; top: 0.134rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 6.484rem; position: absolute; top: 0rem; left: 0.364rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.644rem; width: 6.844rem; position: absolute; top: 0.134rem; left: 0.184rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 6.484rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav a { color: rgb(196, 146, 69); }
@@ -528,11 +566,11 @@ display: none;
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-2-l-one#u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-2-l-one { background-color: rgb(226, 201, 162); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-3#u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-3{position: relative;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-3-l-one#u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-3-l-one{position: relative; display: block; width: 7.204rem; height: 1.084rem; top: 0rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 0.904rem; width: 7.024rem; position: absolute; top: 14.494rem; left: 0.094rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 0.904rem; width: 7.024rem; position: absolute; top: 14.484rem; left: 0.094rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate:before{}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate >.group.heading { text-align: center; }
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.644rem; width: 7.024rem; position: absolute; top: 0.134rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 6.484rem; position: absolute; top: 0rem; left: 0.274rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.644rem; width: 6.664rem; position: absolute; top: 0.134rem; left: 0.184rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 6.304rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate a { color: rgb(196, 146, 69); }
@@ -561,8 +599,8 @@ display: none;
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav{font-size: 0.164rem; line-height: 0.204rem; height: 0.984rem; width: 9.604rem; position: absolute; top: 0rem; left: 0rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav:before{}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav >.group.heading { text-align: center; }
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.644rem; width: 9.604rem; position: absolute; top: 0.174rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 9.124rem; position: absolute; top: 0rem; left: 0.244rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.644rem; width: 9.124rem; position: absolute; top: 0.174rem; left: 0.244rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 8.644rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav a { color: rgb(196, 146, 69); }
@@ -600,11 +638,11 @@ display: none;
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-2-l-one#u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-2-l-one { background-color: rgb(226, 201, 162); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-3#u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-3{position: relative;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-3-l-one#u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-3-l-one{position: relative; display: block; width: 9.604rem; height: 1.224rem; top: 0rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 0.984rem; width: 9.364rem; position: absolute; top: 17.669999999999998rem; left: 0.124rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 0.984rem; width: 9.364rem; position: absolute; top: 17.664rem; left: 0.124rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate:before{}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate >.group.heading { text-align: center; }
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.644rem; width: 9.364rem; position: absolute; top: 0.174rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 8.884rem; position: absolute; top: 0rem; left: 0.244rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.644rem; width: 8.884rem; position: absolute; top: 0.174rem; left: 0.244rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 8.404rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate a { color: rgb(196, 146, 69); }
@@ -633,8 +671,8 @@ display: none;
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav{font-size: 0.164rem; line-height: 0.204rem; height: 0.834rem; width: 14.404rem; position: absolute; top: 0rem; left: 0rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav:before{}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav >.group.heading { text-align: center; }
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.324rem; width: 14.404rem; position: absolute; top: 0.264rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 13.684rem; position: absolute; top: 0rem; left: 0.364rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.324rem; width: 13.684rem; position: absolute; top: 0.264rem; left: 0.364rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 12.964rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav a { color: rgb(196, 146, 69); }
@@ -672,11 +710,11 @@ display: none;
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-2-l-one#u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-2-l-one { background-color: rgb(226, 201, 162); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-3#u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-3{position: relative;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-3-l-one#u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-3-l-one{position: relative; display: block; width: 14.404rem; height: 1.194rem; top: 0rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 0.834rem; width: 14.044rem; position: absolute; top: 14.954rem; left: 0.184rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 0.834rem; width: 14.044rem; position: absolute; top: 14.944rem; left: 0.184rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate:before{}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate >.group.heading { text-align: center; }
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.324rem; width: 14.044rem; position: absolute; top: 0.264rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 13.324rem; position: absolute; top: 0rem; left: 0.364rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.324rem; width: 13.324rem; position: absolute; top: 0.264rem; left: 0.364rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 12.604rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate a { color: rgb(196, 146, 69); }
@@ -705,8 +743,8 @@ display: none;
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav{font-size: 0.204rem; line-height: 0.254rem; height: 1.024rem; width: 17.994rem; position: absolute; top: 0rem; left: 0rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav:before{}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav >.group.heading { text-align: center; }
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading{font-size: 0.204rem; line-height: 0.304rem; height: 0.394rem; width: 17.994rem; position: absolute; top: 0.324rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 17.104rem; position: absolute; top: 0rem; left: 0.454rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading{font-size: 0.204rem; line-height: 0.304rem; height: 0.394rem; width: 17.104rem; position: absolute; top: 0.324rem; left: 0.454rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav a { color: rgb(196, 146, 69); }
@@ -747,8 +785,8 @@ display: none;
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate{font-size: 0.204rem; line-height: 0.254rem; height: 1.024rem; width: 17.554rem; position: absolute; top: 17.564rem; left: 0.234rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate:before{}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate >.group.heading { text-align: center; }
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading{font-size: 0.204rem; line-height: 0.304rem; height: 0.394rem; width: 17.554rem; position: absolute; top: 0.324rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 16.654rem; position: absolute; top: 0rem; left: 0.454rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading{font-size: 0.204rem; line-height: 0.304rem; height: 0.394rem; width: 16.654rem; position: absolute; top: 0.324rem; left: 0.454rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 15.754rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate a { color: rgb(196, 146, 69); }
@@ -777,8 +815,8 @@ display: none;
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav{font-size: 0.154rem; line-height: 0.194rem; height: 0.944rem; width: 18rem; position: absolute; top: 0rem; left: 0rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav:before{}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav >.group.heading { text-align: center; }
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading{font-size: 0.154rem; line-height: 0.234rem; height: 0.304rem; width: 18rem; position: absolute; top: 0.324rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 17.104rem; position: absolute; top: 0rem; left: 0.454rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading{font-size: 0.154rem; line-height: 0.234rem; height: 0.304rem; width: 17.114rem; position: absolute; top: 0.324rem; left: 0.454rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-nav#u-5e17d256-0f7d-418a-9c54-79f52a066301-nav a { color: rgb(196, 146, 69); }
@@ -819,8 +857,8 @@ display: none;
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate{font-size: 0.154rem; line-height: 0.194rem; height: 0.944rem; width: 17.554rem; position: absolute; top: 13.184rem; left: 0.234rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate:before{}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate >.group.heading { text-align: center; }
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading{font-size: 0.154rem; line-height: 0.234rem; height: 0.304rem; width: 17.554rem; position: absolute; top: 0.324rem; left: 0rem;}
-#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 16.654rem; position: absolute; top: 0rem; left: 0.454rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading{font-size: 0.154rem; line-height: 0.234rem; height: 0.304rem; width: 16.664rem; position: absolute; top: 0.324rem; left: 0.454rem;}
+#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 15.754rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
 #u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate#u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate a { color: rgb(196, 146, 69); }
@@ -840,7 +878,7 @@ wbr.w1800{ display: block }
  #u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-3 {
 display: none;
 }
-}</style></head><body><div class="layout-system rust mobile" id="page-5e17d256-0f7d-418a-9c54-79f52a066301"><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_medium_headline w_medium_title layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="feed" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_list w_data w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text w_long_list w_long_data layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i first_layout last_layout feed layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_long_headline w_long_title layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-3-l-one"></div><style id="u-5e17d256-0f7d-418a-9c54-79f52a066301-color">body{background-color: rgba(249, 248, 248, 1)}</style></section><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_none stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_medium_headline w_medium_title stack heading" itemid="u-page-nav" itemtype="nav" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-nav"><div kind="group" index="heading" class="group heading group heading" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading"><h1 kind="title" index="headline" class="medium medium_headline medium_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline"><a class="text-decoration" href="../index.html" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline-a">If you see no reason for <wbr class="w480"></wbr>giving thanks, <wbr class="w481"></wbr>the fault lies <wbr class="w480"></wbr>only in <wbr class="w960"></wbr>yourself</a></h1></div></article><article subject="stack" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_inside text_width_wider group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large stack textual i first_stack last_stack w_headline w_title w_paragraph w_text w_list w_data w_decoration w_short_headline w_short_title w_long_paragraph w_long_text w_long_list w_long_data stack textual" itemid="9cf940b5-87ca-4794-b2ec-47cce32cbc97" itemtype="article" diff_index="1" index="textual" kind="stack" score="4.25" missed="0.25" tag="article" id="u-9cf940b5-87ca-4794-b2ec-47cce32cbc97"><div kind="group" index="textual" class="group textual group textual" id="u-9cf940b5-87ca-4794-b2ec-47cce32cbc97-g-textual"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-9cf940b5-87ca-4794-b2ec-47cce32cbc97-g-textual-t-headline"><span class="text-decoration" id="u-9cf940b5-87ca-4794-b2ec-47cce32cbc97-g-textual-t-headline-span">Naming the <wbr class="w480 w960"></wbr>Beginning</span></h1><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph text paragraph" specificity="0.25" itemprop="text" id="u-9cf940b5-87ca-4794-b2ec-47cce32cbc97-g-textual-t-paragraph"><p><span class="first-letter">T</span>he naming of things is to craft their life, their bent <wbr class="w480 w960"></wbr>and their course. In the act <wbr class="w961 w1799"></wbr>of <wbr class="w481"></wbr>naming, we imbue the <wbr class="w480 w960 w1800"></wbr>subject with the properties of the name ascribed. <wbr class="w960 w1799"></wbr>This <wbr class="w480 w961"></wbr>site <wbr class="w481"></wbr>is named for one of my favourite pieces of <wbr class="w960 w1800"></wbr>music <wbr class="w480"></wbr>by the band <wbr class="w1799"></wbr>Explosions in <wbr class="w961"></wbr>the <wbr class="w481"></wbr>Sky.<a data-grid-id="aca7df5e-ca13-472d-b363-46b083738af5" href="null"></a></p><p><iframe width="420" height="315" frameborder="0" src="https://www.youtube.com/embed/dkixXH94kfI" allowfullscreen=""></iframe></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>s I began to think about the name, and how I'd <wbr class="w960"></wbr>begin <wbr class="w480"></wbr>in this new place I was <wbr class="w961 w1799"></wbr>also <wbr class="w481"></wbr>reminded of one <wbr class="w960"></wbr>of my <wbr class="w480 w1800"></wbr>favourite quotes, which I'd always thought <wbr class="w960"></wbr>came <wbr class="w961 w1799"></wbr>from <wbr class="w480 w481"></wbr>Tecumseh, and which I've subsequently <wbr class="w960"></wbr>learned is <wbr class="w480 w1800"></wbr>disputed in origin. <wbr class="w961 w1799"></wbr>Regardless, I <wbr class="w481"></wbr>find <wbr class="w960"></wbr>beauty in these <wbr class="w480"></wbr>words and seek to live up to more <wbr class="w960"></wbr>than a <wbr class="w1799"></wbr>little <wbr class="w961"></wbr>of it:</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span> don't know what this space will become. I don't <wbr class="w960"></wbr>know <wbr class="w480"></wbr>how much thought I'll <wbr class="w961 w1799"></wbr>really <wbr class="w481"></wbr>give it. But the <wbr class="w960"></wbr>world <wbr class="w1800"></wbr>is <wbr class="w480"></wbr>full of things that I don't know and this is a <wbr class="w960"></wbr>corner <wbr class="w961 w1799"></wbr>in <wbr class="w480"></wbr>which <wbr class="w481"></wbr>I will instead slowly carve out pieces <wbr class="w960"></wbr>of <wbr class="w480 w1800"></wbr>knowledge and perhaps find <wbr class="w961 w1799"></wbr>the rare vein <wbr class="w481"></wbr>of <wbr class="w960"></wbr>wisdom.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>B</span>eginnings, like namings, have much to do with the <wbr class="w480 w960"></wbr>arc of a thing, but they are <wbr class="w961 w1799"></wbr>not <wbr class="w481"></wbr>the thing itself.</p></div><ul kind="data" index="list" class="long long_list long_data data list vfld-trailer data list" specificity="0.25" itemprop="list" id="u-9cf940b5-87ca-4794-b2ec-47cce32cbc97-g-textual-d-list"><ul><li><i data-grid-id="09d45df5-9123-48ed-a351-56b6e480a293">So live your life that the fear of death can never enter <wbr class="w480 w960"></wbr>your heart. Trouble no one <wbr class="w481 w961 w1799"></wbr>about their religion; respect <wbr class="w480 w960 w1800"></wbr>others in their view, and demand that they respect <wbr class="w960 w961 w1799"></wbr>yours. <wbr class="w480 w481"></wbr>Love your life, perfect your life, beautify all things <wbr class="w960"></wbr>in <wbr class="w1800"></wbr>your <wbr class="w480"></wbr>life. Seek to make <wbr class="w961 w1799"></wbr>your life <wbr class="w481"></wbr>long and its purpose <wbr class="w960"></wbr>in the <wbr class="w480"></wbr>service of your people. Prepare a noble death <wbr class="w960 w961 w1799 w1800"></wbr>song for <wbr class="w480"></wbr>the <wbr class="w481"></wbr>day when you go over the great divide. <wbr class="w960"></wbr>Always give a <wbr class="w480"></wbr>word or a sign <wbr class="w961"></wbr>of <wbr class="w1799"></wbr>salute when <wbr class="w481"></wbr>meeting <wbr class="w960"></wbr>or <wbr class="w1800"></wbr>passing a <wbr class="w480"></wbr>friend, even a stranger, when in a lonely <wbr class="w960 w961"></wbr>place. <wbr class="w1799"></wbr>Show <wbr class="w480"></wbr>respect to <wbr class="w481"></wbr>all people and grovel to none. <wbr class="w960"></wbr>When <wbr class="w1800"></wbr>you arise <wbr class="w480"></wbr>in the <wbr class="w961"></wbr>morning give <wbr class="w1799"></wbr>thanks for the food <wbr class="w481 w960"></wbr>and for the joy of <wbr class="w480"></wbr>living. If you see no reason for <wbr class="w961"></wbr>giving <wbr class="w960 w1800"></wbr>thanks, <wbr class="w1799"></wbr>the fault <wbr class="w480"></wbr>lies only in <wbr class="w481"></wbr>yourself. Abuse no one <wbr class="w960"></wbr>and no thing, for <wbr class="w480"></wbr>abuse <wbr class="w961"></wbr>turns the wise <wbr class="w1799"></wbr>ones to fools <wbr class="w960"></wbr>and <wbr class="w1800"></wbr>robs <wbr class="w481"></wbr>the spirit of <wbr class="w480"></wbr>its vision. When it comes your <wbr class="w960 w961"></wbr>time to die, be <wbr class="w1799"></wbr>not like <wbr class="w480"></wbr>those whose hearts <wbr class="w481"></wbr>are filled <wbr class="w960"></wbr>with the <wbr class="w1800"></wbr>fear of death, so <wbr class="w480"></wbr>that <wbr class="w961"></wbr>when their time <wbr class="w1799"></wbr>comes <wbr class="w960"></wbr>they weep and pray for <wbr class="w481"></wbr>a <wbr class="w480"></wbr>little more time to live their <wbr class="w960"></wbr>lives <wbr class="w961"></wbr>over <wbr class="w1800"></wbr>again in a <wbr class="w1799"></wbr>different <wbr class="w480"></wbr>way. Sing your death <wbr class="w960"></wbr>song <wbr class="w481"></wbr>and die like a hero going <wbr class="w480 w961"></wbr>home.</i></li></ul></ul></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_none stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_long_headline w_long_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading"><h1 kind="title" index="headline" class="long long_headline long_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline-a">If you see no reason for <wbr class="w480"></wbr>giving thanks, <wbr class="w481"></wbr>the fault lies <wbr class="w480"></wbr>only <wbr class="w960"></wbr>in yourself feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_medium_headline w_medium_title layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="feed" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_list w_data w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text w_long_list w_long_data layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i first_layout last_layout feed layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_long_headline w_long_title layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-3-l-one"></div><style id="u-5e17d256-0f7d-418a-9c54-79f52a066301-color">body{background-color: rgba(249, 248, 248, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_medium_headline w_medium_title layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="feed" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_list w_data w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text w_long_list w_long_data layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i first_layout last_layout feed layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_long_headline w_long_title layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-cinema-l-one-3-l-one"></div><style id="u-5e17d256-0f7d-418a-9c54-79f52a066301-color">body{background-color: rgba(249, 248, 248, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+}</style></head><body><div class="layout-system rust mobile" id="page-5e17d256-0f7d-418a-9c54-79f52a066301"><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_medium_headline w_medium_title layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="feed" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_list w_data w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text w_long_list w_long_data layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i first_layout last_layout feed layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_long_headline w_long_title layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-mobile-l-one-3-l-one"></div><style id="u-5e17d256-0f7d-418a-9c54-79f52a066301-color">body{background-color: rgba(249, 248, 248, 1)}</style></section><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_medium_headline w_medium_title stack heading" itemid="u-page-nav" itemtype="nav" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-nav"><div kind="group" index="heading" class="group heading group heading" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading"><h1 kind="title" index="headline" class="medium medium_headline medium_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline"><a class="text-decoration" href="../index.html" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-nav-g-heading-t-headline-a">If you see no reason for <wbr class="w480"></wbr>giving thanks, <wbr class="w481"></wbr>the fault lies <wbr class="w480 w960"></wbr>only in yourself</a></h1></div></article><article subject="stack" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_text_emphasis_no_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_xsmall stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_inside text_width_wider group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_small group_h_outset_none group_h_inset_small flow_vertical font_size_large stack textual i first_stack last_stack w_headline w_title w_paragraph w_text w_list w_data w_decoration w_short_headline w_short_title w_long_paragraph w_long_text w_long_list w_long_data stack textual" itemid="9cf940b5-87ca-4794-b2ec-47cce32cbc97" itemtype="article" diff_index="1" index="textual" kind="stack" score="4.25" missed="0.25" tag="article" id="u-9cf940b5-87ca-4794-b2ec-47cce32cbc97"><div kind="group" index="textual" class="group textual group textual" id="u-9cf940b5-87ca-4794-b2ec-47cce32cbc97-g-textual"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-9cf940b5-87ca-4794-b2ec-47cce32cbc97-g-textual-t-headline"><span class="text-decoration" id="u-9cf940b5-87ca-4794-b2ec-47cce32cbc97-g-textual-t-headline-span">Naming the <wbr class="w480 w960"></wbr>Beginning</span></h1><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph text paragraph" specificity="0.25" itemprop="text" id="u-9cf940b5-87ca-4794-b2ec-47cce32cbc97-g-textual-t-paragraph"><p><span class="first-letter">T</span>he naming of things is to craft their life, their bent <wbr class="w480 w960"></wbr>and their course. In the act <wbr class="w961 w1799"></wbr>of <wbr class="w481"></wbr>naming, we imbue the <wbr class="w480 w960 w1800"></wbr>subject with the properties of the name ascribed. <wbr class="w960 w1799"></wbr>This <wbr class="w480 w961"></wbr>site <wbr class="w481"></wbr>is named for one of my favourite pieces of <wbr class="w960 w1800"></wbr>music <wbr class="w480"></wbr>by the band <wbr class="w1799"></wbr>Explosions in <wbr class="w961"></wbr>the <wbr class="w481"></wbr>Sky.<a data-grid-id="aca7df5e-ca13-472d-b363-46b083738af5" href="null"></a></p><p><iframe width="420" height="315" frameborder="0" src="https://www.youtube.com/embed/dkixXH94kfI" allowfullscreen=""></iframe></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>s I began to think about the name, and how I'd <wbr class="w960"></wbr>begin <wbr class="w480"></wbr>in this new place I was <wbr class="w961 w1799"></wbr>also <wbr class="w481"></wbr>reminded of one <wbr class="w960"></wbr>of my <wbr class="w480 w1800"></wbr>favourite quotes, which I'd always thought <wbr class="w960"></wbr>came <wbr class="w961 w1799"></wbr>from <wbr class="w480 w481"></wbr>Tecumseh, and which I've subsequently <wbr class="w960"></wbr>learned is <wbr class="w480 w1800"></wbr>disputed in origin. <wbr class="w961 w1799"></wbr>Regardless, I <wbr class="w481"></wbr>find <wbr class="w960"></wbr>beauty in these <wbr class="w480"></wbr>words and seek to live up to more <wbr class="w960"></wbr>than a <wbr class="w1799"></wbr>little <wbr class="w961"></wbr>of it:</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span> don't know what this space will become. I don't <wbr class="w960"></wbr>know <wbr class="w480"></wbr>how much thought I'll <wbr class="w961 w1799"></wbr>really <wbr class="w481"></wbr>give it. But the <wbr class="w960"></wbr>world <wbr class="w1800"></wbr>is <wbr class="w480"></wbr>full of things that I don't know and this is a <wbr class="w960"></wbr>corner <wbr class="w961 w1799"></wbr>in <wbr class="w480"></wbr>which <wbr class="w481"></wbr>I will instead slowly carve out pieces <wbr class="w960"></wbr>of <wbr class="w480 w1800"></wbr>knowledge and perhaps find <wbr class="w961 w1799"></wbr>the rare vein <wbr class="w481"></wbr>of <wbr class="w960"></wbr>wisdom.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>B</span>eginnings, like namings, have much to do with the <wbr class="w480 w960"></wbr>arc of a thing, but they are <wbr class="w961 w1799"></wbr>not <wbr class="w481"></wbr>the thing itself.</p></div><ul kind="data" index="list" class="long long_list long_data data list vfld-trailer data list" specificity="0.25" itemprop="list" id="u-9cf940b5-87ca-4794-b2ec-47cce32cbc97-g-textual-d-list"><ul><li><i data-grid-id="09d45df5-9123-48ed-a351-56b6e480a293">So live your life that the fear of death can never enter <wbr class="w480 w960"></wbr>your heart. Trouble no one <wbr class="w481 w961 w1799"></wbr>about their religion; <wbr class="w1800"></wbr>respect <wbr class="w480 w960"></wbr>others in their view, and demand that they respect <wbr class="w960 w961 w1799"></wbr>yours. <wbr class="w480 w481"></wbr>Love your life, perfect your life, beautify all <wbr class="w1800"></wbr>things <wbr class="w960"></wbr>in your <wbr class="w480"></wbr>life. Seek to make <wbr class="w961 w1799"></wbr>your life <wbr class="w481"></wbr>long and its purpose <wbr class="w960"></wbr>in the <wbr class="w480"></wbr>service of your people. Prepare a noble <wbr class="w1800"></wbr>death <wbr class="w960 w961 w1799"></wbr>song for <wbr class="w480"></wbr>the <wbr class="w481"></wbr>day when you go over the great divide. <wbr class="w960"></wbr>Always give a <wbr class="w480"></wbr>word or a sign <wbr class="w961"></wbr>of <wbr class="w1799"></wbr>salute when <wbr class="w481 w1800"></wbr>meeting <wbr class="w960"></wbr>or passing a <wbr class="w480"></wbr>friend, even a stranger, when in a lonely <wbr class="w960 w961"></wbr>place. <wbr class="w1799"></wbr>Show <wbr class="w480"></wbr>respect to <wbr class="w481"></wbr>all people and grovel to <wbr class="w1800"></wbr>none. <wbr class="w960"></wbr>When you arise <wbr class="w480"></wbr>in the <wbr class="w961"></wbr>morning give <wbr class="w1799"></wbr>thanks for the food <wbr class="w481 w960"></wbr>and for the joy of <wbr class="w480"></wbr>living. If you see no reason for <wbr class="w961 w1800"></wbr>giving <wbr class="w960"></wbr>thanks, <wbr class="w1799"></wbr>the fault <wbr class="w480"></wbr>lies only in <wbr class="w481"></wbr>yourself. Abuse no one <wbr class="w960"></wbr>and no thing, for <wbr class="w480"></wbr>abuse <wbr class="w961"></wbr>turns the wise <wbr class="w1799"></wbr>ones to <wbr class="w1800"></wbr>fools <wbr class="w960"></wbr>and robs <wbr class="w481"></wbr>the spirit of <wbr class="w480"></wbr>its vision. When it comes your <wbr class="w960 w961"></wbr>time to die, be <wbr class="w1799"></wbr>not like <wbr class="w480"></wbr>those whose hearts <wbr class="w481"></wbr>are <wbr class="w1800"></wbr>filled <wbr class="w960"></wbr>with the fear of death, so <wbr class="w480"></wbr>that <wbr class="w961"></wbr>when their time <wbr class="w1799"></wbr>comes <wbr class="w960"></wbr>they weep and pray for <wbr class="w481"></wbr>a <wbr class="w480"></wbr>little more time to live <wbr class="w1800"></wbr>their <wbr class="w960"></wbr>lives <wbr class="w961"></wbr>over again in a <wbr class="w1799"></wbr>different <wbr class="w480"></wbr>way. Sing your death <wbr class="w960"></wbr>song <wbr class="w481"></wbr>and die like a hero going <wbr class="w480 w961"></wbr>home.</i></li></ul></ul></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_long_headline w_long_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading"><h1 kind="title" index="headline" class="long long_headline long_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-alternate-g-heading-t-headline-a">If you see no reason for <wbr class="w480"></wbr>giving thanks, <wbr class="w481"></wbr>the fault <wbr class="w480"></wbr>lies <wbr class="w960"></wbr>only in yourself feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_medium_headline w_medium_title layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="feed" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_list w_data w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text w_long_list w_long_data layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i first_layout last_layout feed layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_long_headline w_long_title layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-desktop-l-one-3-l-one"></div><style id="u-5e17d256-0f7d-418a-9c54-79f52a066301-color">body{background-color: rgba(249, 248, 248, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_medium_headline w_medium_title layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="feed" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_list w_data w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text w_long_list w_long_data layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i first_layout last_layout feed layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_long_headline w_long_title layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-5e17d256-0f7d-418a-9c54-79f52a066301-cinema-l-one-3-l-one"></div><style id="u-5e17d256-0f7d-418a-9c54-79f52a066301-color">body{background-color: rgba(249, 248, 248, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-20
  * http://eightmedia.github.io/hammer.js
  *
@@ -1143,7 +1181,9 @@ setMargin = function(element, value, velocity) {
 setHamburger(findHamburger());
 
 window.addEventListener('resize', function() {
-  return setHamburger(findHamburger());
+  return setTimeout(function() {
+    return setHamburger(findHamburger());
+  }, 10);
 });
 
 window.addEventListener('scroll', function() {
@@ -1365,9 +1405,11 @@ global.Hamburger = require('./hamburger');
 
 global.Highlighter = require('./highlighter');
 
+global.Player = require('./player');
+
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./animator":3,"./hamburger":4,"./highlighter":5,"./paginator":7,"hammerjs/hammer.min.js":1,"picturefill/dist/picturefill.min.js":2}],7:[function(require,module,exports){
+},{"./animator":3,"./hamburger":4,"./highlighter":5,"./paginator":7,"./player":8,"hammerjs/hammer.min.js":1,"picturefill/dist/picturefill.min.js":2}],7:[function(require,module,exports){
 var appendPage, mainpage, page, ref, ref1, urls;
 
 page = require('./reflow');
@@ -1468,7 +1510,192 @@ module.exports = function() {
 };
 
 
-},{"./reflow":8}],8:[function(require,module,exports){
+},{"./reflow":9}],8:[function(require,module,exports){
+var Player, Youtube, iframe, revealed, rgb2hex;
+
+iframe = null;
+
+Youtube = null;
+
+Player = function(id, src, width, height, color, bg) {
+  if (src.indexOf('youtube') > -1) {
+    src += '&color=white&theme=light&modestbranding=1';
+  }
+  src = src.replace('COLOR', color).replace('BG', bg);
+  if (location.protocol !== 'https:') {
+    src = src.replace('https:', 'http:');
+  }
+  iframe = document.createElement('iframe');
+  iframe.id = id;
+  iframe.setAttribute('allowfullscreen', '');
+  iframe.src = src;
+  iframe.width = width;
+  iframe.height = height;
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.left = 0;
+  iframe.style.right = 0;
+  iframe.style.position = 'absolute';
+  iframe.style.opacity = 0.2;
+  iframe.onload = function() {
+    return iframe.style.opacity = 1;
+  };
+  return iframe;
+};
+
+revealed = null;
+
+Player.reveal = function(iframe) {
+  var diff, i, left, len, parent, play, ref, ref1, sibling, target, top, translateX, translateY;
+  while (target = (target || iframe).parentNode) {
+    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
+      if (target.parentNode.classList.contains('group')) {
+        parent = target.parentNode;
+      } else {
+        parent = target;
+      }
+      revealed = iframe;
+      play = parent.getElementsByClassName('play')[0];
+      left = target.offsetWidth - play.offsetLeft - play.offsetWidth;
+      top = -play.offsetTop;
+      play.style.webkitTransformOrigin = 'top right';
+      play.style.webkitTransform = 'translateX(' + left + 'px) translateY(' + top + 'px) scale(0.5)';
+      target.classList.add('revealed');
+      ref1 = parent.parentNode.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        sibling = ref1[i];
+        if (sibling.nodeType === 1 && sibling !== parent) {
+          translateX = translateY = null;
+          if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
+            translateX = -diff;
+          }
+          if ((diff = target.offsetLeft + target.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
+            if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
+              translateX = diff;
+            }
+          }
+          if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
+            translateY = -diff;
+          }
+          if ((diff = target.offsetTop + target.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
+            if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
+              translateY = diff;
+            }
+          }
+          if (Math.abs(translateX) > Math.abs(translateY)) {
+            sibling.style.webkitTransform = 'translateY(' + translateY + 'px)';
+          } else {
+            sibling.style.webkitTransform = 'translateX(' + translateX + 'px)';
+          }
+          console.log(translateX, translateY, sibling);
+        }
+      }
+    }
+  }
+};
+
+Player.hide = function(iframe) {
+  var i, len, parent, play, ref, ref1, sibling;
+  while (parent = (parent || iframe).parentNode) {
+    if ((ref = parent.classList) != null ? ref.contains('revealed') : void 0) {
+      parent.classList.remove('revealed');
+      if (parent.parentNode.classList.contains('group')) {
+        parent = parent.parentNode;
+      }
+      play = parent.getElementsByClassName('play')[0];
+      play.style.webkitTransform = '';
+      ref1 = parent.parentNode.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        sibling = ref1[i];
+        sibling.style.webkitTransform = '';
+      }
+    }
+  }
+  return revealed = null;
+};
+
+window.addEventListener('resize', function() {
+  return setTimeout(function() {
+    return requestAnimationFrame(function() {
+      if (revealed) {
+        if (revealed.offsetWidth) {
+          return Player.reveal(revealed);
+        } else {
+          return Player.stop(revealed);
+        }
+      }
+    });
+  }, 10);
+});
+
+Player.stop = function(iframe) {
+  var old;
+  old = iframe;
+  iframe.style.opacity = 0;
+  setTimeout(function() {
+    var ref;
+    return (ref = old.parentNode) != null ? ref.removeChild(old) : void 0;
+  }, 300);
+  Player.hide(iframe);
+  return iframe = null;
+};
+
+document.addEventListener('click', function(e) {
+  var bg, color, header, parent, play, ref, ref1, results, styles, target;
+  target = e.target;
+  results = [];
+  while (target) {
+    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
+      if (play = target.getElementsByClassName('play')[0]) {
+        if ((iframe != null ? iframe.parentNode : void 0) === target) {
+          Player.stop(iframe);
+        } else {
+          if (iframe) {
+            Player.stop(iframe);
+          }
+          color = bg = null;
+          header = (ref1 = target.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
+          parent = header || play;
+          while (parent) {
+            if (parent.nodeType === 1) {
+              styles = window.getComputedStyle(parent);
+              if (styles.color.indexOf('rgba') === -1 || !styles.color.match(/,\s*0\)/)) {
+                if (color == null) {
+                  color = styles.color;
+                }
+              }
+              if (styles['background-color'].indexOf('rgba') === -1 || !styles['background-color'].match(/,\s*0\)/)) {
+                if (bg == null) {
+                  bg = styles['background-color'];
+                }
+              }
+            }
+            parent = parent.parentNode;
+          }
+          iframe = Player(play.id + '-player', play.getAttribute('data-src'), play.getAttribute('data-width'), play.getAttribute('data-height'), rgb2hex(color), rgb2hex(bg));
+          target.appendChild(iframe);
+          Player.reveal(iframe);
+        }
+        e.preventDefault();
+        break;
+      }
+    }
+    results.push(target = target.parentNode);
+  }
+  return results;
+});
+
+rgb2hex = function(rgb) {
+  rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+  if (rgb && rgb.length === 4) {
+    return ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2);
+  }
+};
+
+window.exports = window.Player = Player;
+
+
+},{}],9:[function(require,module,exports){
 module.exports = {
   reflow: function(container) {
     var counter, heights, hidden, hole, holed, holes, i, id, ids, index, j, k, l, last, layout, layouts, len, len1, len2, len3, m, mutations, name, node, ref, ref1, ref2, stack, stacks;
@@ -1733,7 +1960,7 @@ module.exports = function(callback) {
   } else {
     protocol = '';
   }
-  url = protocol + "//cdn.thegrid.io/gss/gss-document/1.2.4/gss.document.parser.js";
+  url = protocol + "//cdn.thegrid.io/gss/gss-document/1.2.8/gss.document.parser.js";
   if (location.toString().indexOf('//localhost:8080') > -1) {
     return module.exports.load(protocol + "//localhost:8080/node_modules/gss-document/dist/gss.document.parser.js", callback, function() {
       return module.exports.load(url, callback);
