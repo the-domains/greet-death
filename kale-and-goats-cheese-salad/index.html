@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>Kale and goat's cheese salad - Greet Death</title><link href="../rss.xml" title="If you see no reason for giving thanks, the fault lies only in yourself feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.3"><meta name="the-grid-solution" content="31143729-e185-4f93-9f08-7699b783e9e4"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
+<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>Kale and goat's cheese salad - Greet Death</title><link href="../rss.xml" title="If you see no reason for giving thanks, the fault lies only in yourself feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.17"><meta name="the-grid-solution" content="cb2c3e16-b5ce-4d6b-86a6-56631840f873"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
 @media (min-width: 15.6875em)and (max-width: 15.75em){	html{font-size:3.28125em !important}}
 @media (min-width: 15.8125em)and (max-width: 16.25em){	html{font-size:3.375em !important}}
 @media (min-width: 16.3125em)and (max-width: 16.6875em){html{font-size:3.46875em !important}}
@@ -203,13 +203,6 @@ body {
 .stack {
   z-index: 1;
   transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-}
-.group,
-.aside,
-.decoration {
-  transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
 }
 picture {
   display: inline-block;
@@ -270,10 +263,6 @@ html.exporting a {
 .media > a {
   display: inline-block;
 }
-.media iframe {
-  transition: 0.3s opacity ease-in;
-  -webkit-transition: 0.3s opacity ease-in;
-}
 h1 a,
 h2 a,
 h3 a {
@@ -294,15 +283,11 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-.text li {
-  margin-left: 1.5em;
-}
 .decoration {
   pointer-events: none;
 }
 .svg {
   position: relative;
-  background-color: currentColor;
 }
 .svg > svg {
   position: absolute;
@@ -328,6 +313,9 @@ a {
 .svg polyline {
   stroke: currentColor;
 }
+.decoration {
+  background-color: currentColor;
+}
 .svg {
   background-color: transparent;
 }
@@ -343,12 +331,39 @@ a {
   background-color: currentColor;
   content: "";
 }
-.colors-style-aside-border .publisher,
-.colors-style-aside-border .author {
-  padding: .4vw .6vw;
+.revealed,
+.revealed > * {
+  pointer-events: none;
 }
-.cover_only_header:first-of-type {
-  position: fixed;
+.revealed .aside,
+.revealed a {
+  pointer-events: all;
+}
+.revealed {
+  background-image: none !important;
+  background-color: none !important;
+}
+.stack,
+.group,
+.aside,
+.decoration,
+.media,
+html body a.media,
+.media img,
+.media picture,
+iframe {
+  min-width: 0;
+  min-height: 0;
+  transition-duration: .3s;
+  transition-property: transform, color, background-color, opacity, clip, z-index, border-width;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: -webkit-transform, color, background-color, opacity, clip, z-index, border-width;
+  -webkit-transition-timing-function: ease-out;
+}
+.media img {
+  transition-property: transform, color, background-color;
+  -webkit-transition-property: -webkit-transform, color, background-color;
 }
 .decoration {
   z-index: 3;
@@ -361,7 +376,7 @@ ul {
 }
 .panel .heading {
   text-transform: uppercase;
-  letter-spacing: .03rem;
+  letter-spacing: 1px;
 }
 .listing:not(.open) .shadow-overlay {
   pointer-events: none;
@@ -376,17 +391,6 @@ ul {
 .group .text,
 .group .aside {
   z-index: 2;
-}
-.group button {
-  border-radius: 3px;
-  padding: 15px 25px;
-  margin-top: 36px;
-}
-.group button:hover {
-  opacity: .8;
-}
-.group .attribution {
-  overflow: hidden;
 }
 .group .attribution:after {
   display: block;
@@ -459,6 +463,7 @@ ul {
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 4.324rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
+#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading { background-color: rgb(247, 244, 237); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a { color: rgb(196, 146, 69); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a:hover { color: rgb(0, 0, 0); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a:active { color: rgb(0, 0, 0); }
@@ -483,6 +488,7 @@ ul {
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .text.paragraph a:hover { color: rgb(147, 145, 138); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .decoration.separator { color: rgb(196, 146, 69); }
+#u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual { background-color: rgb(247, 244, 237); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a { color: rgb(196, 146, 69); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a:hover { color: rgb(0, 0, 0); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a:active { color: rgb(0, 0, 0); }
@@ -497,6 +503,7 @@ ul {
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column { background-color: rgb(247, 244, 237); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a { color: rgb(196, 146, 69); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a:hover { color: rgb(0, 0, 0); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a:active { color: rgb(0, 0, 0); }
@@ -511,6 +518,7 @@ ul {
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column { background-color: rgb(247, 244, 237); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a { color: rgb(196, 146, 69); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a:hover { color: rgb(0, 0, 0); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a:active { color: rgb(0, 0, 0); }
@@ -525,6 +533,7 @@ ul {
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column { background-color: rgb(247, 244, 237); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a { color: rgb(196, 146, 69); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a:hover { color: rgb(0, 0, 0); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a:active { color: rgb(0, 0, 0); }
@@ -539,6 +548,7 @@ ul {
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column { background-color: rgb(247, 244, 237); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a { color: rgb(196, 146, 69); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a:hover { color: rgb(0, 0, 0); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a:active { color: rgb(0, 0, 0); }
@@ -554,6 +564,7 @@ ul {
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column { background-color: rgb(247, 244, 237); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a { color: rgb(196, 146, 69); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a:hover { color: rgb(0, 0, 0); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a:active { color: rgb(0, 0, 0); }
@@ -569,6 +580,7 @@ ul {
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column { background-color: rgb(247, 244, 237); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a { color: rgb(196, 146, 69); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a:hover { color: rgb(0, 0, 0); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a:active { color: rgb(0, 0, 0); }
@@ -583,6 +595,7 @@ ul {
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column { background-color: rgb(247, 244, 237); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a { color: rgb(196, 146, 69); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a:hover { color: rgb(0, 0, 0); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a:active { color: rgb(0, 0, 0); }
@@ -596,6 +609,7 @@ ul {
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column { background-color: rgb(247, 244, 237); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a { color: rgb(196, 146, 69); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a:hover { color: rgb(0, 0, 0); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a:active { color: rgb(0, 0, 0); }
@@ -610,6 +624,7 @@ ul {
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 4.204rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading > .title.headline a:hover { color: rgb(33, 28, 22); }
+#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading { background-color: rgb(247, 243, 237); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a { color: rgb(170, 113, 39); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a:hover { color: rgb(204, 204, 204); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a:active { color: rgb(255, 255, 255); }
@@ -640,6 +655,7 @@ display: none;
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 6.484rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
+#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading { background-color: rgb(247, 244, 237); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a { color: rgb(196, 146, 69); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a:hover { color: rgb(0, 0, 0); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a:active { color: rgb(0, 0, 0); }
@@ -664,6 +680,7 @@ display: none;
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .text.paragraph a:hover { color: rgb(147, 145, 138); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .decoration.separator { color: rgb(196, 146, 69); }
+#u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual { background-color: rgb(247, 244, 237); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a { color: rgb(196, 146, 69); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a:hover { color: rgb(0, 0, 0); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a:active { color: rgb(0, 0, 0); }
@@ -678,6 +695,7 @@ display: none;
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column { background-color: rgb(247, 244, 237); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a { color: rgb(196, 146, 69); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a:hover { color: rgb(0, 0, 0); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a:active { color: rgb(0, 0, 0); }
@@ -692,6 +710,7 @@ display: none;
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column { background-color: rgb(247, 244, 237); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a { color: rgb(196, 146, 69); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a:hover { color: rgb(0, 0, 0); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a:active { color: rgb(0, 0, 0); }
@@ -706,6 +725,7 @@ display: none;
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column { background-color: rgb(247, 244, 237); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a { color: rgb(196, 146, 69); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a:hover { color: rgb(0, 0, 0); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a:active { color: rgb(0, 0, 0); }
@@ -720,6 +740,7 @@ display: none;
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column { background-color: rgb(247, 244, 237); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a { color: rgb(196, 146, 69); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a:hover { color: rgb(0, 0, 0); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a:active { color: rgb(0, 0, 0); }
@@ -735,6 +756,7 @@ display: none;
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column { background-color: rgb(247, 244, 237); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a { color: rgb(196, 146, 69); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a:hover { color: rgb(0, 0, 0); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a:active { color: rgb(0, 0, 0); }
@@ -750,6 +772,7 @@ display: none;
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column { background-color: rgb(247, 244, 237); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a { color: rgb(196, 146, 69); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a:hover { color: rgb(0, 0, 0); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a:active { color: rgb(0, 0, 0); }
@@ -764,6 +787,7 @@ display: none;
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column { background-color: rgb(247, 244, 237); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a { color: rgb(196, 146, 69); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a:hover { color: rgb(0, 0, 0); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a:active { color: rgb(0, 0, 0); }
@@ -777,6 +801,7 @@ display: none;
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column { background-color: rgb(247, 244, 237); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a { color: rgb(196, 146, 69); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a:hover { color: rgb(0, 0, 0); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a:active { color: rgb(0, 0, 0); }
@@ -791,6 +816,7 @@ display: none;
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 6.304rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading > .title.headline a:hover { color: rgb(33, 28, 22); }
+#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading { background-color: rgb(247, 243, 237); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a { color: rgb(170, 113, 39); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a:hover { color: rgb(204, 204, 204); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a:active { color: rgb(255, 255, 255); }
@@ -821,6 +847,7 @@ display: none;
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 8.644rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
+#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading { background-color: rgb(247, 244, 237); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a { color: rgb(196, 146, 69); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a:hover { color: rgb(0, 0, 0); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a:active { color: rgb(0, 0, 0); }
@@ -845,6 +872,7 @@ display: none;
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .text.paragraph a:hover { color: rgb(147, 145, 138); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .decoration.separator { color: rgb(196, 146, 69); }
+#u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual { background-color: rgb(247, 244, 237); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a { color: rgb(196, 146, 69); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a:hover { color: rgb(0, 0, 0); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a:active { color: rgb(0, 0, 0); }
@@ -859,6 +887,7 @@ display: none;
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column { background-color: rgb(247, 244, 237); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a { color: rgb(196, 146, 69); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a:hover { color: rgb(0, 0, 0); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a:active { color: rgb(0, 0, 0); }
@@ -873,6 +902,7 @@ display: none;
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column { background-color: rgb(247, 244, 237); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a { color: rgb(196, 146, 69); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a:hover { color: rgb(0, 0, 0); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a:active { color: rgb(0, 0, 0); }
@@ -887,6 +917,7 @@ display: none;
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column { background-color: rgb(247, 244, 237); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a { color: rgb(196, 146, 69); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a:hover { color: rgb(0, 0, 0); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a:active { color: rgb(0, 0, 0); }
@@ -901,6 +932,7 @@ display: none;
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column { background-color: rgb(247, 244, 237); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a { color: rgb(196, 146, 69); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a:hover { color: rgb(0, 0, 0); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a:active { color: rgb(0, 0, 0); }
@@ -916,6 +948,7 @@ display: none;
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column { background-color: rgb(247, 244, 237); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a { color: rgb(196, 146, 69); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a:hover { color: rgb(0, 0, 0); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a:active { color: rgb(0, 0, 0); }
@@ -931,6 +964,7 @@ display: none;
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column { background-color: rgb(247, 244, 237); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a { color: rgb(196, 146, 69); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a:hover { color: rgb(0, 0, 0); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a:active { color: rgb(0, 0, 0); }
@@ -945,6 +979,7 @@ display: none;
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column { background-color: rgb(247, 244, 237); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a { color: rgb(196, 146, 69); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a:hover { color: rgb(0, 0, 0); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a:active { color: rgb(0, 0, 0); }
@@ -958,6 +993,7 @@ display: none;
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column { background-color: rgb(247, 244, 237); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a { color: rgb(196, 146, 69); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a:hover { color: rgb(0, 0, 0); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a:active { color: rgb(0, 0, 0); }
@@ -972,6 +1008,7 @@ display: none;
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 8.404rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading > .title.headline a:hover { color: rgb(33, 28, 22); }
+#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading { background-color: rgb(247, 243, 237); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a { color: rgb(170, 113, 39); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a:hover { color: rgb(204, 204, 204); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a:active { color: rgb(255, 255, 255); }
@@ -1002,6 +1039,7 @@ display: none;
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 12.964rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
+#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading { background-color: rgb(247, 244, 237); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a { color: rgb(196, 146, 69); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a:hover { color: rgb(0, 0, 0); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a:active { color: rgb(0, 0, 0); }
@@ -1026,6 +1064,7 @@ display: none;
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .text.paragraph a:hover { color: rgb(147, 145, 138); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .decoration.separator { color: rgb(196, 146, 69); }
+#u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual { background-color: rgb(247, 244, 237); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a { color: rgb(196, 146, 69); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a:hover { color: rgb(0, 0, 0); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a:active { color: rgb(0, 0, 0); }
@@ -1040,6 +1079,7 @@ display: none;
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column { background-color: rgb(247, 244, 237); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a { color: rgb(196, 146, 69); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a:hover { color: rgb(0, 0, 0); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a:active { color: rgb(0, 0, 0); }
@@ -1054,6 +1094,7 @@ display: none;
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column { background-color: rgb(247, 244, 237); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a { color: rgb(196, 146, 69); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a:hover { color: rgb(0, 0, 0); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a:active { color: rgb(0, 0, 0); }
@@ -1068,6 +1109,7 @@ display: none;
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column { background-color: rgb(247, 244, 237); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a { color: rgb(196, 146, 69); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a:hover { color: rgb(0, 0, 0); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a:active { color: rgb(0, 0, 0); }
@@ -1082,6 +1124,7 @@ display: none;
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column { background-color: rgb(247, 244, 237); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a { color: rgb(196, 146, 69); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a:hover { color: rgb(0, 0, 0); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a:active { color: rgb(0, 0, 0); }
@@ -1097,6 +1140,7 @@ display: none;
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column { background-color: rgb(247, 244, 237); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a { color: rgb(196, 146, 69); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a:hover { color: rgb(0, 0, 0); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a:active { color: rgb(0, 0, 0); }
@@ -1112,6 +1156,7 @@ display: none;
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column { background-color: rgb(247, 244, 237); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a { color: rgb(196, 146, 69); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a:hover { color: rgb(0, 0, 0); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a:active { color: rgb(0, 0, 0); }
@@ -1126,6 +1171,7 @@ display: none;
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column { background-color: rgb(247, 244, 237); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a { color: rgb(196, 146, 69); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a:hover { color: rgb(0, 0, 0); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a:active { color: rgb(0, 0, 0); }
@@ -1139,6 +1185,7 @@ display: none;
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column { background-color: rgb(247, 244, 237); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a { color: rgb(196, 146, 69); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a:hover { color: rgb(0, 0, 0); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a:active { color: rgb(0, 0, 0); }
@@ -1153,6 +1200,7 @@ display: none;
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 12.604rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading > .title.headline a:hover { color: rgb(33, 28, 22); }
+#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading { background-color: rgb(247, 243, 237); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a { color: rgb(170, 113, 39); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a:hover { color: rgb(204, 204, 204); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a:active { color: rgb(255, 255, 255); }
@@ -1183,6 +1231,7 @@ display: none;
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
+#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading { background-color: rgb(247, 244, 237); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a { color: rgb(196, 146, 69); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a:hover { color: rgb(0, 0, 0); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a:active { color: rgb(0, 0, 0); }
@@ -1207,6 +1256,7 @@ display: none;
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .text.paragraph a:hover { color: rgb(147, 145, 138); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .decoration.separator { color: rgb(196, 146, 69); }
+#u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual { background-color: rgb(247, 244, 237); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a { color: rgb(196, 146, 69); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a:hover { color: rgb(0, 0, 0); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a:active { color: rgb(0, 0, 0); }
@@ -1221,6 +1271,7 @@ display: none;
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column { background-color: rgb(247, 244, 237); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a { color: rgb(196, 146, 69); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a:hover { color: rgb(0, 0, 0); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a:active { color: rgb(0, 0, 0); }
@@ -1235,6 +1286,7 @@ display: none;
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column { background-color: rgb(247, 244, 237); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a { color: rgb(196, 146, 69); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a:hover { color: rgb(0, 0, 0); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a:active { color: rgb(0, 0, 0); }
@@ -1249,6 +1301,7 @@ display: none;
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column { background-color: rgb(247, 244, 237); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a { color: rgb(196, 146, 69); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a:hover { color: rgb(0, 0, 0); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a:active { color: rgb(0, 0, 0); }
@@ -1263,6 +1316,7 @@ display: none;
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column { background-color: rgb(247, 244, 237); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a { color: rgb(196, 146, 69); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a:hover { color: rgb(0, 0, 0); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a:active { color: rgb(0, 0, 0); }
@@ -1278,6 +1332,7 @@ display: none;
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column { background-color: rgb(247, 244, 237); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a { color: rgb(196, 146, 69); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a:hover { color: rgb(0, 0, 0); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a:active { color: rgb(0, 0, 0); }
@@ -1293,6 +1348,7 @@ display: none;
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column { background-color: rgb(247, 244, 237); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a { color: rgb(196, 146, 69); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a:hover { color: rgb(0, 0, 0); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a:active { color: rgb(0, 0, 0); }
@@ -1307,6 +1363,7 @@ display: none;
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column { background-color: rgb(247, 244, 237); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a { color: rgb(196, 146, 69); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a:hover { color: rgb(0, 0, 0); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a:active { color: rgb(0, 0, 0); }
@@ -1320,6 +1377,7 @@ display: none;
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column { background-color: rgb(247, 244, 237); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a { color: rgb(196, 146, 69); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a:hover { color: rgb(0, 0, 0); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a:active { color: rgb(0, 0, 0); }
@@ -1334,6 +1392,7 @@ display: none;
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 15.754rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading > .title.headline a:hover { color: rgb(33, 28, 22); }
+#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading { background-color: rgb(247, 243, 237); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a { color: rgb(170, 113, 39); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a:hover { color: rgb(204, 204, 204); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a:active { color: rgb(255, 255, 255); }
@@ -1364,6 +1423,7 @@ display: none;
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading > .title.headline a:hover { color: rgb(78, 59, 31); }
+#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav .group.heading { background-color: rgb(247, 244, 237); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a { color: rgb(196, 146, 69); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a:hover { color: rgb(0, 0, 0); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav a:active { color: rgb(0, 0, 0); }
@@ -1388,6 +1448,7 @@ display: none;
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .text.paragraph a:hover { color: rgb(147, 145, 138); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual > .decoration.separator { color: rgb(196, 146, 69); }
+#u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 .group.textual { background-color: rgb(247, 244, 237); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a { color: rgb(196, 146, 69); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a:hover { color: rgb(0, 0, 0); }
 #u-2fc731fb-07f2-44f0-ac58-5308aa875136#u-2fc731fb-07f2-44f0-ac58-5308aa875136 a:active { color: rgb(0, 0, 0); }
@@ -1402,6 +1463,7 @@ display: none;
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c .group.column { background-color: rgb(247, 244, 237); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a { color: rgb(196, 146, 69); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a:hover { color: rgb(0, 0, 0); }
 #u-080ec192-b4db-4fa5-9635-8d890d1cea9c#u-080ec192-b4db-4fa5-9635-8d890d1cea9c a:active { color: rgb(0, 0, 0); }
@@ -1416,6 +1478,7 @@ display: none;
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a .group.column { background-color: rgb(247, 244, 237); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a { color: rgb(196, 146, 69); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a:hover { color: rgb(0, 0, 0); }
 #u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a#u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a a:active { color: rgb(0, 0, 0); }
@@ -1430,6 +1493,7 @@ display: none;
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 .group.column { background-color: rgb(247, 244, 237); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a { color: rgb(196, 146, 69); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a:hover { color: rgb(0, 0, 0); }
 #u-03b860b1-990e-4d32-94e6-4646ba3d2255#u-03b860b1-990e-4d32-94e6-4646ba3d2255 a:active { color: rgb(0, 0, 0); }
@@ -1444,6 +1508,7 @@ display: none;
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 .group.column { background-color: rgb(247, 244, 237); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a { color: rgb(196, 146, 69); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a:hover { color: rgb(0, 0, 0); }
 #u-417447eb-554e-4ee6-84dc-1e31178beae4#u-417447eb-554e-4ee6-84dc-1e31178beae4 a:active { color: rgb(0, 0, 0); }
@@ -1459,6 +1524,7 @@ display: none;
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 .group.column { background-color: rgb(247, 244, 237); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a { color: rgb(196, 146, 69); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a:hover { color: rgb(0, 0, 0); }
 #u-529c605c-13cb-4317-ad3f-077dac5acdc0#u-529c605c-13cb-4317-ad3f-077dac5acdc0 a:active { color: rgb(0, 0, 0); }
@@ -1474,6 +1540,7 @@ display: none;
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c .group.column { background-color: rgb(247, 244, 237); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a { color: rgb(196, 146, 69); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a:hover { color: rgb(0, 0, 0); }
 #u-b82ab3b7-12e4-46e6-bbdf-89016faf859c#u-b82ab3b7-12e4-46e6-bbdf-89016faf859c a:active { color: rgb(0, 0, 0); }
@@ -1488,6 +1555,7 @@ display: none;
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 .group.column { background-color: rgb(247, 244, 237); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a { color: rgb(196, 146, 69); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a:hover { color: rgb(0, 0, 0); }
 #u-af53f764-a971-49c4-8461-64a616246347#u-af53f764-a971-49c4-8461-64a616246347 a:active { color: rgb(0, 0, 0); }
@@ -1501,6 +1569,7 @@ display: none;
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph { color: rgb(0, 0, 0); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph a { color: rgb(185, 159, 118); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column > .text.paragraph a:hover { color: rgb(147, 145, 138); }
+#u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 .group.column { background-color: rgb(247, 244, 237); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a { color: rgb(196, 146, 69); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a:hover { color: rgb(0, 0, 0); }
 #u-f9af127c-50c0-4619-adf1-7e3779858205#u-f9af127c-50c0-4619-adf1-7e3779858205 a:active { color: rgb(0, 0, 0); }
@@ -1515,6 +1584,7 @@ display: none;
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 15.754rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading > .title.headline { color: rgb(61, 52, 41); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading > .title.headline a:hover { color: rgb(33, 28, 22); }
+#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate .group.heading { background-color: rgb(247, 243, 237); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a { color: rgb(170, 113, 39); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a:hover { color: rgb(204, 204, 204); }
 #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate#u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate a:active { color: rgb(255, 255, 255); }
@@ -1532,7 +1602,7 @@ wbr.w1800{ display: block }
  #u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-desktop-l-one-3 {
 display: none;
 }
-}</style></head><body><div class="layout-system rust mobile" id="page-fc3f5054-af0d-4e88-9b07-d0fe88afbb48"><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_medium_headline w_medium_title layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-mobile-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-mobile-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-mobile-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-mobile-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_long_headline w_long_title layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-mobile-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-mobile-l-one-3-l-one"></div><style id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-color">body{background-color: rgba(226, 201, 162, 1)}</style></section><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_medium_headline w_medium_title stack heading" itemid="u-page-nav" itemtype="nav" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav"><div kind="group" index="heading" class="group heading group heading" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading"><h1 kind="title" index="headline" class="medium medium_headline medium_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline"><a class="text-decoration" href="../index.html" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline-a">If you see no reason for <wbr class="w480"></wbr>giving thanks, <wbr class="w481"></wbr>the fault lies <wbr class="w480 w960"></wbr>only in yourself</a></h1></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large chapter stack textual i first_chapter w_headline w_title w_paragraph w_text w_separator w_decoration w_short_headline w_short_title w_long_paragraph w_long_text stack textual" itemid="2fc731fb-07f2-44f0-ac58-5308aa875136" itemtype="text" diff_index="4" index="textual" kind="stack" score="1.625" missed="0.375" tag="article" id="u-2fc731fb-07f2-44f0-ac58-5308aa875136"><div kind="group" index="textual" class="group textual group textual" id="u-2fc731fb-07f2-44f0-ac58-5308aa875136-g-textual"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-2fc731fb-07f2-44f0-ac58-5308aa875136-g-textual-t-headline"><span class="text-decoration" id="u-2fc731fb-07f2-44f0-ac58-5308aa875136-g-textual-t-headline-span">Kale and goat's <wbr class="w480 w960"></wbr>cheese <wbr class="w481 w961 w1799"></wbr>salad</span></h1><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-2fc731fb-07f2-44f0-ac58-5308aa875136-g-textual-t-paragraph"><p><span class="first-letter">I</span> <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>was on the train on my way home earlier today and <wbr class="w480 w960"></wbr>wondering what the fuck I could <wbr class="w481 w961 w1799"></wbr>possibly say to you that <wbr class="w480 w960"></wbr>would be <wbr class="w1800"></wbr>even slightly meaningful. I couldn't think of a <wbr class="w480"></wbr>single <wbr class="w481 w960 w961 w1799"></wbr>godsdamned thing. No surprise really. I mean, I don't <wbr class="w480"></wbr>trust <wbr class="w960"></wbr>you, I <wbr class="w1800"></wbr>don't believe in this <wbr class="w481"></wbr>process <wbr class="w961 w1799"></wbr>and I have no faith <wbr class="w480"></wbr>in this <wbr class="w960"></wbr>leading to any sort of viable outcome.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>nd as a result, I will get nothing useful out of you. And the <wbr class="w480 w960"></wbr>court will get nothing useful <wbr class="w481"></wbr>out <wbr class="w961 w1799"></wbr>of either of us and this <wbr class="w480 w960"></wbr>whole <wbr class="w1800"></wbr>debacle will simply have prolonged the inevitable. I'll <wbr class="w480 w481 w960"></wbr>wind up <wbr class="w961 w1799"></wbr>in a home, or maybe even in actual jail and you will <wbr class="w480 w960"></wbr>maybe <wbr class="w1800"></wbr>sigh, probably shrug <wbr class="w481"></wbr>and then <wbr class="w961 w1799"></wbr>you will close the file <wbr class="w480 w960"></wbr>and move onto the next case.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>M</span>aybe you'll think of me every now and then over the next <wbr class="w480 w960"></wbr>few months. Most likely it'll be <wbr class="w481 w961 w1799"></wbr>the next time you prescribe <wbr class="w480 w960"></wbr>this <wbr class="w1800"></wbr>ridiculous exercise to some other doomed soul. But <wbr class="w480 w481 w960"></wbr>mostly <wbr class="w961 w1799"></wbr>you won't think of me at all.</p></div><div kind="decoration" index="separator" class="decoration separator decoration separator" id="u-2fc731fb-07f2-44f0-ac58-5308aa875136-g-textual-d-separator"></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="080ec192-b4db-4fa5-9635-8d890d1cea9c" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-080ec192-b4db-4fa5-9635-8d890d1cea9c"><div kind="group" index="column" class="group column group column" id="u-080ec192-b4db-4fa5-9635-8d890d1cea9c-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-080ec192-b4db-4fa5-9635-8d890d1cea9c-g-column-t-paragraph"><p><span class="first-letter">M</span>e though, I'll think of you often. I'll wonder where you <wbr class="w480 w960"></wbr>learned about this idea and what <wbr class="w481"></wbr>on <wbr class="w961 w1799"></wbr>earth made you think it <wbr class="w480 w960"></wbr>was a <wbr class="w1800"></wbr>useful fucking tool. I'll try to work out why you <wbr class="w480"></wbr>thought <wbr class="w481 w960"></wbr>I'd be <wbr class="w961 w1799"></wbr>suited to it. I'll agonise for days and probably <wbr class="w480"></wbr>weeks, <wbr class="w960 w1800"></wbr>possibly even months, trying to <wbr class="w481 w961 w1799"></wbr>understand what it <wbr class="w480"></wbr>was that I <wbr class="w960"></wbr>said or did that made you think requiring a <wbr class="w480"></wbr>perversity of <wbr class="w481 w960 w1799 w1800"></wbr>words <wbr class="w961"></wbr>from me would lead to some sort of <wbr class="w480"></wbr>insight or <wbr class="w960"></wbr>breakthrough that might change the <wbr class="w481 w1799"></wbr>course <wbr class="w961"></wbr>of <wbr class="w480"></wbr>things.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>W</span>orst of all, I'll wonder if maybe it could have changed the <wbr class="w480 w960"></wbr>course of things. I'll worry that <wbr class="w481 w961 w1799"></wbr>maybe it was my fault <wbr class="w480 w960"></wbr>because <wbr class="w1800"></wbr>I didn't believe, didn't trust, didn't have faith.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>hat'll make me angry. I'll lash out. I always do when I'm <wbr class="w480 w960"></wbr>angry. And wherever they send <wbr class="w481"></wbr>me, <wbr class="w961 w1799"></wbr>it'll be the kind of place <wbr class="w480 w960"></wbr>where <wbr class="w1800"></wbr>my lashings won't be allowed to go unpunished. <wbr class="w480 w481 w960"></wbr>Someone <wbr class="w961 w1799"></wbr>else will feel the need to respond, to assert <wbr class="w480 w960"></wbr>themselves, to <wbr class="w1800"></wbr>remind everyone else <wbr class="w481"></wbr>that <wbr class="w1799"></wbr>they're <wbr class="w961"></wbr>the biggest, <wbr class="w480 w960"></wbr>baddest, scariest motherfucker in the joint.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="936dc1ac-f0b5-45ae-b411-3bbb15b53e8a" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a"><div kind="group" index="column" class="group column group column" id="u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a-g-column-t-paragraph"><p><span class="first-letter">I</span>'m going to get hurt because of you, because of this. I'm <wbr class="w480 w960"></wbr>going to get hurt and I'm going <wbr class="w481"></wbr>to <wbr class="w961 w1799"></wbr>get more time. There's a <wbr class="w480 w960"></wbr>very <wbr class="w1800"></wbr>real risk that I'll become institutionalised. Or more <wbr class="w480 w481 w960 w961 w1799"></wbr>institutionalised. I'm pretty sure your file already says that <wbr class="w480"></wbr>I've <wbr class="w960"></wbr>been in <wbr class="w1800"></wbr>and out of too <wbr class="w481"></wbr>many <wbr class="w961 w1799"></wbr>systems for someone my <wbr class="w480"></wbr>age.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he strange thing for me right now though is that while I <wbr class="w480 w960"></wbr>know that I will be angry at <wbr class="w481"></wbr>some <wbr class="w961 w1799"></wbr>point in the future, I'm not <wbr class="w480 w960 w1800"></wbr>really all that angry now. I mean, I'm pissed off. I'm <i data-grid-id="579d25c9-fba0-4a24-aeb8-54c6f7d7372a"><wbr class="w480 w481"></wbr>resentful</i>, <wbr class="w960"></wbr>but <wbr class="w961 w1799"></wbr>I'm not actually angry. More resigned to it. <wbr class="w480"></wbr>You've told <wbr class="w1800"></wbr>the <wbr class="w960"></wbr>monkey to dance <wbr class="w481"></wbr>and so this <wbr class="w961 w1799"></wbr>monkey knows <wbr class="w480"></wbr>it has to dance <wbr class="w960"></wbr>until the music stops. It just also knows that <wbr class="w480 w481"></wbr>there's no <wbr class="w1800"></wbr>chair <wbr class="w960 w961 w1799"></wbr>waiting for it when the music stops and it'll <wbr class="w480"></wbr>be left with its <wbr class="w960"></wbr>arse hanging in <wbr class="w481"></wbr>the wind, waiting <wbr class="w961 w1799"></wbr>to be <wbr class="w480"></wbr>spanked.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>S</span>o that's the way of it for now. And soon the way of it will <wbr class="w480"></wbr>be <wbr class="w960"></wbr>your complete lack of <wbr class="w481"></wbr>memory <wbr class="w961 w1799"></wbr>and my obsessive <wbr class="w480"></wbr>picking <wbr class="w960 w1800"></wbr>over of vaguely remembered details.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="03b860b1-990e-4d32-94e6-4646ba3d2255" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-03b860b1-990e-4d32-94e6-4646ba3d2255"><div kind="group" index="column" class="group column group column" id="u-03b860b1-990e-4d32-94e6-4646ba3d2255-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-03b860b1-990e-4d32-94e6-4646ba3d2255-g-column-t-paragraph"><p><span class="first-letter">Y</span>ou'll go home and eat your healthy dinner while watching <wbr class="w480 w960"></wbr>your guilty pleasure shows <wbr class="w481"></wbr>and <wbr class="w961 w1799"></wbr>telling your loving partner <wbr class="w480 w960"></wbr>that <wbr class="w1800"></wbr>it's so tragic, the work that you do, but you take heart <wbr class="w481"></wbr>in <wbr class="w480 w960 w961 w1799"></wbr>knowing that it's important.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>'ll be locked in a cell smaller than your bathroom and try <wbr class="w480"></wbr>not <wbr class="w960"></wbr>to be distracted by the <wbr class="w481 w1799"></wbr>screams <wbr class="w961"></wbr>and shouts of those <wbr class="w480"></wbr>who <wbr class="w1800"></wbr>are <wbr class="w960"></wbr>even more insane than me. I'll eat whatever shit <wbr class="w480 w481 w1799"></wbr>they're <wbr class="w960"></wbr>legally <wbr class="w961"></wbr>able to get away with serving and be careful <wbr class="w480"></wbr>mental <wbr class="w960 w1800"></wbr>track of who owes me <wbr class="w481 w1799"></wbr>favours and who <wbr class="w961"></wbr>wants to <wbr class="w480"></wbr>hurt me. <wbr class="w960"></wbr>When I have a spare moment, I'll wonder if you <wbr class="w480"></wbr>even <wbr class="w481 w1799"></wbr>read all <wbr class="w960 w1800"></wbr>these words.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>'ll ask myself if you really could be bothered to read them <wbr class="w480"></wbr>all <wbr class="w960"></wbr>and why would you even <wbr class="w481"></wbr>really <wbr class="w961 w1799"></wbr>care? I'll wonder what <wbr class="w480"></wbr>your <wbr class="w960 w1800"></wbr>reaction was to any reading you might have done. <wbr class="w480 w481"></wbr>Mercifully, <wbr class="w960 w961 w1799"></wbr>before that line of thought can get too self-<wbr class="w480"></wbr>destructive, I'll <wbr class="w960 w1800"></wbr>probably have to <wbr class="w481"></wbr>fend off a late <wbr class="w961 w1799"></wbr>night <wbr class="w480"></wbr>attempt at sexual <wbr class="w960"></wbr>assault from my cell-mate, so there's that <wbr class="w480"></wbr>to look <wbr class="w481"></wbr>forward to.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="417447eb-554e-4ee6-84dc-1e31178beae4" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-417447eb-554e-4ee6-84dc-1e31178beae4"><div kind="group" index="column" class="group column group column" id="u-417447eb-554e-4ee6-84dc-1e31178beae4-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-417447eb-554e-4ee6-84dc-1e31178beae4-g-column-t-paragraph"><p><span class="first-letter">T</span>ell me, do you eat a lot of kale? I bet you do. I bet your <wbr class="w480 w960"></wbr>perfect fucking partner has you <wbr class="w481 w961 w1799"></wbr>drinking some bullshit <wbr class="w480 w960"></wbr>horrible <wbr class="w1800"></wbr>juice every morning before you leave for work.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he hilarious thing is that you and I both know that you're <wbr class="w480"></wbr>not <wbr class="w960"></wbr>a good enough person to <wbr class="w481 w961 w1799"></wbr>deserve someone looking <wbr class="w480"></wbr>after <wbr class="w1800"></wbr>you <wbr class="w960"></wbr>so carefully. You don't deserve someone loving <wbr class="w480"></wbr>you <wbr class="w481 w961 w1799"></wbr>enough <wbr class="w960"></wbr>to give you kale. You don't even deserve fresh <wbr class="w480"></wbr>vegetables.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span> can tell, I can see it in your eyes. I see the way your eyes <wbr class="w480 w960"></wbr>tighten when you read what <wbr class="w481 w961 w1799"></wbr>they've accused me of, the way <wbr class="w480 w960 w1800"></wbr>your mouth twitches at one corner. I can tell you're not <wbr class="w481"></wbr>just <wbr class="w480 w960 w961 w1799"></wbr>curious, you're something more than that.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="529c605c-13cb-4317-ad3f-077dac5acdc0" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-529c605c-13cb-4317-ad3f-077dac5acdc0"><div kind="group" index="column" class="group column group column" id="u-529c605c-13cb-4317-ad3f-077dac5acdc0-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-529c605c-13cb-4317-ad3f-077dac5acdc0-g-column-t-paragraph"><p><span class="first-letter">I</span>t's not just the usual titillation either. There's something <wbr class="w480 w960"></wbr>about you that amused, and... <wbr class="w481"></wbr>and<i data-grid-id="4618840c-9dae-4771-893b-05cb11497eb9"> <wbr class="w961 w1799"></wbr>jealous</i>. That's the word. <wbr class="w480 w960"></wbr>It's a <wbr class="w1800"></wbr>sick little shadow that clings to you. The smell of a <wbr class="w480 w481"></wbr>stale <wbr class="w960"></wbr>fart <wbr class="w961 w1799"></wbr>trapped in a chair you've been sitting in for too <wbr class="w480"></wbr>long. The <wbr class="w960 w1800"></wbr>lingering sense that <wbr class="w481"></wbr>you wish it <wbr class="w961 w1799"></wbr>had been yours. <wbr class="w480"></wbr>That you <wbr class="w960"></wbr>want to know what it's like to have done the <wbr class="w480"></wbr>things <wbr class="w481"></wbr>that page <wbr class="w960 w1800"></wbr>says <wbr class="w961 w1799"></wbr>I did. That you want to know how <wbr class="w480"></wbr>thrilled you would be <wbr class="w960"></wbr>after doing them. <wbr class="w481"></wbr>That there's part <wbr class="w1799"></wbr>of <wbr class="w480 w961"></wbr>you that thinks you <wbr class="w960 w1800"></wbr>might just be turned on.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Y</span>ou sick fuck. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>nd now you know that I know. I can see it in you. And so <wbr class="w480"></wbr>we <wbr class="w960"></wbr>both know that you don't <wbr class="w481 w961 w1799"></wbr>deserve love, you don't deserve <wbr class="w480 w960 w1800"></wbr>trust, you sure as fuck don't deserve kale smoothies.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>B</span>ut that doesn't matter. It doesn't matter now and it won't <wbr class="w480 w960"></wbr>matter then. I can't tell anyone, <wbr class="w481 w961 w1799"></wbr>and even if I did, there's <wbr class="w480 w960"></wbr>nothing <wbr class="w1800"></wbr>to actually tell. Who's going to believe the story of a <wbr class="w480 w481 w960 w961 w1799"></wbr>shadow? Who's going to listen to me? Who even fucking <wbr class="w480 w960"></wbr>cares?</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="b82ab3b7-12e4-46e6-bbdf-89016faf859c" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-b82ab3b7-12e4-46e6-bbdf-89016faf859c"><div kind="group" index="column" class="group column group column" id="u-b82ab3b7-12e4-46e6-bbdf-89016faf859c-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-b82ab3b7-12e4-46e6-bbdf-89016faf859c-g-column-t-paragraph"><p><span class="first-letter">N</span>ot even I care. You're a sick fuck. So what? Maybe if you <wbr class="w480 w960"></wbr>were the first one I'd ever <wbr class="w481 w961 w1799"></wbr>encountered that'd be interesting. <wbr class="w480 w960 w1800"></wbr>Might have even been impressive. But not now. Being <wbr class="w481 w1799"></wbr>sick <wbr class="w480 w960 w961"></wbr>isn't unique or special. Hell, it'd be way more impressive, <wbr class="w480 w960"></wbr>much, <wbr class="w1800"></wbr>much more <wbr class="w481"></wbr>frightening <wbr class="w1799"></wbr>if you <wbr class="w961"></wbr>were fucking well <wbr class="w480 w960"></wbr>adjusted or some shit like that.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>hat's something I wouldn't really know how to deal with. I <wbr class="w480 w960"></wbr>mean, what the fuck does <wbr class="w481 w961 w1799"></wbr>anybody say to a fucking normal <wbr class="w480 w960 w1800"></wbr>person? Seriously.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>N</span>ormal people, with their normal houses and their normal <wbr class="w480 w960"></wbr>cars and their normal jobs and <wbr class="w481 w961 w1799"></wbr>their normal holidays and <wbr class="w480 w960"></wbr>their <wbr class="w1800"></wbr>normal friends and their normal children and they <wbr class="w480"></wbr>might <wbr class="w481 w960"></wbr>as <wbr class="w961 w1799"></wbr>fucking well be characters in a movie, or mindless <wbr class="w480"></wbr>drones <wbr class="w960"></wbr>in a <wbr class="w1800"></wbr>video game.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>O</span>ne time, when I was still a little kid, my uncle wrote me a <wbr class="w480 w960"></wbr>book for my birthday. I'd only <wbr class="w481"></wbr>just <wbr class="w961 w1799"></wbr>learnt to read and I <wbr class="w480"></wbr>thought <wbr class="w960"></wbr>it <wbr class="w1800"></wbr>was the most amazing thing ever. My uncle wrote <wbr class="w480"></wbr>a <wbr class="w481"></wbr>book <wbr class="w960"></wbr>just <wbr class="w961 w1799"></wbr>for me! My own book! Nobody else had one like <wbr class="w480"></wbr>it! <wbr class="w960 w1800"></wbr>Incredible.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="af53f764-a971-49c4-8461-64a616246347" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-af53f764-a971-49c4-8461-64a616246347"><div kind="group" index="column" class="group column group column" id="u-af53f764-a971-49c4-8461-64a616246347-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-af53f764-a971-49c4-8461-64a616246347-g-column-t-paragraph"><p><span class="first-letter">I</span>t was called "They're going to try to make you normal" and <wbr class="w480"></wbr>it <wbr class="w960"></wbr>was all about how I <wbr class="w481"></wbr>shouldn't <wbr class="w961 w1799"></wbr>conform, how I should be <wbr class="w480 w960 w1800"></wbr>different and myself, no matter what society tried to <wbr class="w481"></wbr>make <wbr class="w480 w960"></wbr>me. I <wbr class="w961 w1799"></wbr>was too young to really understand it, but I guess I <wbr class="w480"></wbr>read <wbr class="w960"></wbr>it <wbr class="w1800"></wbr>again when I was <wbr class="w481"></wbr>older because I <wbr class="w961 w1799"></wbr>remember what it <wbr class="w480"></wbr>was <wbr class="w960"></wbr>about. I wonder what he'd think of me now?</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span> wonder if he'd think all of this was his fault? Do you think <wbr class="w480 w960"></wbr>all of this is his fault? I mean, <wbr class="w481"></wbr>I <wbr class="w961 w1799"></wbr>know your sort usually <wbr class="w480"></wbr>looks <wbr class="w960 w1800"></wbr>for fucked up parental issues. If you can inject a <wbr class="w480"></wbr>touch of <wbr class="w481 w960 w961 w1799"></wbr>incest you do, after all your entire profession is for <wbr class="w480"></wbr>perverts, <wbr class="w960"></wbr>but <wbr class="w1800"></wbr>still. Do you think this is <wbr class="w481"></wbr>his <wbr class="w961 w1799"></wbr>fault?</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>F</span>or mine, I don't. I mean, if we could actually all point back <wbr class="w480"></wbr>to <wbr class="w960"></wbr>one moment in time, one <wbr class="w481 w961 w1799"></wbr>incident and say "that's the <wbr class="w480"></wbr>thing <wbr class="w960 w1800"></wbr>that made me who I am", well that'd make us all much <wbr class="w480 w481 w960 w961 w1799"></wbr>simpler creatures than we really are, wouldn't it?</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i last_chapter w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="f9af127c-50c0-4619-adf1-7e3779858205" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-f9af127c-50c0-4619-adf1-7e3779858205"><div kind="group" index="column" class="group column group column" id="u-f9af127c-50c0-4619-adf1-7e3779858205-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-f9af127c-50c0-4619-adf1-7e3779858205-g-column-t-paragraph"><p><span class="first-letter">B</span>ut it's nice to have a scapegoat waiting in the wings, just <wbr class="w480"></wbr>in <wbr class="w960"></wbr>case it becomes necessary <wbr class="w481"></wbr>to <wbr class="w961 w1799"></wbr>make use of one. Not that <wbr class="w480"></wbr>a <wbr class="w960 w1800"></wbr>scapegoat's going to work in my case. There's no grassy <wbr class="w480 w481 w960"></wbr>knoll, <wbr class="w961 w1799"></wbr>there's no hint of a second shooter. I have literally no <wbr class="w480 w960 w1800"></wbr>alibi. It turns out that sleeping <wbr class="w481"></wbr>on your <wbr class="w961 w1799"></wbr>own is really fucking <wbr class="w480 w960"></wbr>impractical if you want to be able to assure the cops you <wbr class="w480 w481 w960 w1800"></wbr>didn't do <wbr class="w961 w1799"></wbr>something. I wish I'd thought of that excuse when <wbr class="w480 w960"></wbr>mum was still trying to stop <wbr class="w481"></wbr>me bringing <wbr class="w961 w1799"></wbr>girlfriends home.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>nyway, I think that's probably the daily duty done and in <wbr class="w480"></wbr>any <wbr class="w960"></wbr>case I'm sick of you and <wbr class="w481"></wbr>this <wbr class="w961 w1799"></wbr>and me and fucking <wbr class="w480"></wbr>words for <wbr class="w960 w1800"></wbr>now. Time for my kale salad. With goat's cheese <wbr class="w480"></wbr>of <wbr class="w481"></wbr>course.</p></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_long_headline w_long_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading"><h1 kind="title" index="headline" class="long long_headline long_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline-a">If you see no reason for <wbr class="w480"></wbr>giving thanks, <wbr class="w481"></wbr>the fault <wbr class="w480"></wbr>lies <wbr class="w960"></wbr>only in yourself feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_medium_headline w_medium_title layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_long_headline w_long_title layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-desktop-l-one-3-l-one"></div><style id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-color">body{background-color: rgba(226, 201, 162, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_medium_headline w_medium_title layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_long_headline w_long_title layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-cinema-l-one-3-l-one"></div><style id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-color">body{background-color: rgba(226, 201, 162, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+}</style></head><body><div class="layout-system rust mobile" id="page-fc3f5054-af0d-4e88-9b07-d0fe88afbb48"><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_medium_headline w_medium_title layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-mobile-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-mobile-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-mobile-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-mobile-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_long_headline w_long_title layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-mobile-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-mobile-l-one-3-l-one"></div><style id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-color">body{background-color: rgba(226, 201, 162, 1)}</style></section><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_medium_headline w_medium_title stack heading" itemid="u-page-nav" itemtype="nav" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav"><div kind="group" index="heading" class="group heading group heading" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading"><h1 kind="title" index="headline" class="medium medium_headline medium_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline"><a class="text-decoration" href="../index.html" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-nav-g-heading-t-headline-a">If you see no reason for giving <wbr class="w480"></wbr>thanks, the <wbr class="w481"></wbr>fault lies only in <wbr class="w480 w960"></wbr>yourself</a></h1></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large chapter stack textual i first_chapter w_headline w_title w_paragraph w_text w_separator w_decoration w_short_headline w_short_title w_long_paragraph w_long_text stack textual" itemid="2fc731fb-07f2-44f0-ac58-5308aa875136" itemtype="text" diff_index="4" index="textual" kind="stack" score="1.625" missed="0.375" tag="article" id="u-2fc731fb-07f2-44f0-ac58-5308aa875136"><div kind="group" index="textual" class="group textual group textual" id="u-2fc731fb-07f2-44f0-ac58-5308aa875136-g-textual"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-2fc731fb-07f2-44f0-ac58-5308aa875136-g-textual-t-headline"><span class="text-decoration" id="u-2fc731fb-07f2-44f0-ac58-5308aa875136-g-textual-t-headline-span">Kale and goat's <wbr class="w480 w960"></wbr>cheese <wbr class="w481 w961 w1799"></wbr>salad</span></h1><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-2fc731fb-07f2-44f0-ac58-5308aa875136-g-textual-t-paragraph"><p><span class="first-letter">I</span> <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>was on the train on my way home earlier today and <wbr class="w480 w960"></wbr>wondering what the fuck I could <wbr class="w481 w961 w1799"></wbr>possibly say to you that <wbr class="w480 w960"></wbr>would be <wbr class="w1800"></wbr>even slightly meaningful. I couldn't think of a <wbr class="w480"></wbr>single <wbr class="w481 w960 w961 w1799"></wbr>godsdamned thing. No surprise really. I mean, I don't <wbr class="w480"></wbr>trust <wbr class="w960"></wbr>you, I <wbr class="w1800"></wbr>don't believe in this <wbr class="w481"></wbr>process <wbr class="w961 w1799"></wbr>and I have no faith <wbr class="w480"></wbr>in this <wbr class="w960"></wbr>leading to any sort of viable outcome.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>nd as a result, I will get nothing useful out of you. And the <wbr class="w480 w960"></wbr>court will get nothing useful <wbr class="w481"></wbr>out <wbr class="w961 w1799"></wbr>of either of us and this <wbr class="w480 w960"></wbr>whole <wbr class="w1800"></wbr>debacle will simply have prolonged the inevitable. I'll <wbr class="w480 w481 w960"></wbr>wind up <wbr class="w961 w1799"></wbr>in a home, or maybe even in actual jail and you will <wbr class="w480 w960"></wbr>maybe <wbr class="w1800"></wbr>sigh, probably shrug <wbr class="w481"></wbr>and then <wbr class="w961 w1799"></wbr>you will close the file <wbr class="w480 w960"></wbr>and move onto the next case.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">M</span>aybe you'll think of me every now and then over the next <wbr class="w480 w960"></wbr>few months. Most likely it'll be <wbr class="w481 w961 w1799"></wbr>the next time you prescribe <wbr class="w480 w960"></wbr>this <wbr class="w1800"></wbr>ridiculous exercise to some other doomed soul. But <wbr class="w480 w481 w960"></wbr>mostly <wbr class="w961 w1799"></wbr>you won't think of me at all.</p></div><div kind="decoration" index="separator" class="decoration separator decoration separator" id="u-2fc731fb-07f2-44f0-ac58-5308aa875136-g-textual-d-separator"></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="080ec192-b4db-4fa5-9635-8d890d1cea9c" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-080ec192-b4db-4fa5-9635-8d890d1cea9c"><div kind="group" index="column" class="group column group column" id="u-080ec192-b4db-4fa5-9635-8d890d1cea9c-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-080ec192-b4db-4fa5-9635-8d890d1cea9c-g-column-t-paragraph"><p><span class="first-letter">M</span>e though, I'll think of you often. I'll wonder where you <wbr class="w480 w960"></wbr>learned about this idea and what <wbr class="w481"></wbr>on <wbr class="w961 w1799"></wbr>earth made you think it <wbr class="w480 w960"></wbr>was a <wbr class="w1800"></wbr>useful fucking tool. I'll try to work out why you <wbr class="w480"></wbr>thought <wbr class="w481 w960"></wbr>I'd be <wbr class="w961 w1799"></wbr>suited to it. I'll agonise for days and probably <wbr class="w480"></wbr>weeks, <wbr class="w960 w1800"></wbr>possibly even months, trying to <wbr class="w481 w961 w1799"></wbr>understand what it <wbr class="w480"></wbr>was that I <wbr class="w960"></wbr>said or did that made you think requiring a <wbr class="w480"></wbr>perversity of <wbr class="w481 w960 w1799 w1800"></wbr>words <wbr class="w961"></wbr>from me would lead to some sort of <wbr class="w480"></wbr>insight or <wbr class="w960"></wbr>breakthrough that might change the <wbr class="w481 w1799"></wbr>course <wbr class="w961"></wbr>of <wbr class="w480"></wbr>things.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">W</span>orst of all, I'll wonder if maybe it could have changed the <wbr class="w480 w960"></wbr>course of things. I'll worry that <wbr class="w481 w961 w1799"></wbr>maybe it was my fault <wbr class="w480 w960"></wbr>because <wbr class="w1800"></wbr>I didn't believe, didn't trust, didn't have faith.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>hat'll make me angry. I'll lash out. I always do when I'm <wbr class="w480 w960"></wbr>angry. And wherever they send <wbr class="w481"></wbr>me, <wbr class="w961 w1799"></wbr>it'll be the kind of place <wbr class="w480 w960"></wbr>where <wbr class="w1800"></wbr>my lashings won't be allowed to go unpunished. <wbr class="w480 w481 w960"></wbr>Someone <wbr class="w961 w1799"></wbr>else will feel the need to respond, to assert <wbr class="w480 w960"></wbr>themselves, to <wbr class="w1800"></wbr>remind everyone else <wbr class="w481"></wbr>that <wbr class="w1799"></wbr>they're <wbr class="w961"></wbr>the biggest, <wbr class="w480 w960"></wbr>baddest, scariest motherfucker in the joint.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="936dc1ac-f0b5-45ae-b411-3bbb15b53e8a" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a"><div kind="group" index="column" class="group column group column" id="u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-936dc1ac-f0b5-45ae-b411-3bbb15b53e8a-g-column-t-paragraph"><p><span class="first-letter">I</span>'m going to get hurt because of you, because of this. I'm <wbr class="w480 w960"></wbr>going to get hurt and I'm going <wbr class="w481"></wbr>to <wbr class="w961 w1799"></wbr>get more time. There's a <wbr class="w480 w960"></wbr>very <wbr class="w1800"></wbr>real risk that I'll become institutionalised. Or more <wbr class="w480 w481 w960 w961 w1799"></wbr>institutionalised. I'm pretty sure your file already says that <wbr class="w480"></wbr>I've <wbr class="w960"></wbr>been in <wbr class="w1800"></wbr>and out of too <wbr class="w481"></wbr>many <wbr class="w961 w1799"></wbr>systems for someone my <wbr class="w480"></wbr>age.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he strange thing for me right now though is that while I <wbr class="w480 w960"></wbr>know that I will be angry at <wbr class="w481"></wbr>some <wbr class="w961 w1799"></wbr>point in the future, I'm not <wbr class="w480 w960 w1800"></wbr>really all that angry now. I mean, I'm pissed off. I'm <wbr class="w480"></wbr><wbr class="w481"></wbr><i data-grid-id="579d25c9-fba0-4a24-aeb8-54c6f7d7372a">resentful</i>, <wbr class="w960"></wbr>but <wbr class="w961 w1799"></wbr>I'm not actually angry. More resigned to it. <wbr class="w480"></wbr>You've told <wbr class="w1800"></wbr>the <wbr class="w960"></wbr>monkey to dance <wbr class="w481"></wbr>and so this <wbr class="w961 w1799"></wbr>monkey knows <wbr class="w480"></wbr>it has to dance <wbr class="w960"></wbr>until the music stops. It just also knows that <wbr class="w480 w481"></wbr>there's no <wbr class="w1800"></wbr>chair <wbr class="w960 w961 w1799"></wbr>waiting for it when the music stops and it'll <wbr class="w480"></wbr>be left with its <wbr class="w960"></wbr>arse hanging in <wbr class="w481"></wbr>the wind, waiting <wbr class="w961 w1799"></wbr>to be <wbr class="w480"></wbr>spanked.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">S</span>o that's the way of it for now. And soon the way of it will <wbr class="w480"></wbr>be <wbr class="w960"></wbr>your complete lack of <wbr class="w481"></wbr>memory <wbr class="w961 w1799"></wbr>and my obsessive <wbr class="w480"></wbr>picking <wbr class="w960 w1800"></wbr>over of vaguely remembered details.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="03b860b1-990e-4d32-94e6-4646ba3d2255" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-03b860b1-990e-4d32-94e6-4646ba3d2255"><div kind="group" index="column" class="group column group column" id="u-03b860b1-990e-4d32-94e6-4646ba3d2255-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-03b860b1-990e-4d32-94e6-4646ba3d2255-g-column-t-paragraph"><p><span class="first-letter">Y</span>ou'll go home and eat your healthy dinner while watching <wbr class="w480 w960"></wbr>your guilty pleasure shows <wbr class="w481"></wbr>and <wbr class="w961 w1799"></wbr>telling your loving partner <wbr class="w480 w960"></wbr>that <wbr class="w1800"></wbr>it's so tragic, the work that you do, but you take heart <wbr class="w481"></wbr>in <wbr class="w480 w960 w961 w1799"></wbr>knowing that it's important.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">I</span>'ll be locked in a cell smaller than your bathroom and try <wbr class="w480"></wbr>not <wbr class="w960"></wbr>to be distracted by the <wbr class="w481 w1799"></wbr>screams <wbr class="w961"></wbr>and shouts of those <wbr class="w480"></wbr>who <wbr class="w1800"></wbr>are <wbr class="w960"></wbr>even more insane than me. I'll eat whatever shit <wbr class="w480 w481 w1799"></wbr>they're <wbr class="w960"></wbr>legally <wbr class="w961"></wbr>able to get away with serving and be careful <wbr class="w480"></wbr>mental <wbr class="w960 w1800"></wbr>track of who owes me <wbr class="w481 w1799"></wbr>favours and who <wbr class="w961"></wbr>wants to <wbr class="w480"></wbr>hurt me. <wbr class="w960"></wbr>When I have a spare moment, I'll wonder if you <wbr class="w480"></wbr>even <wbr class="w481 w1799"></wbr>read all <wbr class="w960 w1800"></wbr>these words.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">I</span>'ll ask myself if you really could be bothered to read them <wbr class="w480"></wbr>all <wbr class="w960"></wbr>and why would you even <wbr class="w481"></wbr>really <wbr class="w961 w1799"></wbr>care? I'll wonder what <wbr class="w480"></wbr>your <wbr class="w960 w1800"></wbr>reaction was to any reading you might have done. <wbr class="w480 w481"></wbr>Mercifully, <wbr class="w960 w961 w1799"></wbr>before that line of thought can get too self-<wbr class="w480"></wbr>destructive, I'll <wbr class="w960 w1800"></wbr>probably have to <wbr class="w481"></wbr>fend off a late <wbr class="w961 w1799"></wbr>night <wbr class="w480"></wbr>attempt at sexual <wbr class="w960"></wbr>assault from my cell-mate, so there's that <wbr class="w480"></wbr>to look <wbr class="w481"></wbr>forward to.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="417447eb-554e-4ee6-84dc-1e31178beae4" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-417447eb-554e-4ee6-84dc-1e31178beae4"><div kind="group" index="column" class="group column group column" id="u-417447eb-554e-4ee6-84dc-1e31178beae4-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-417447eb-554e-4ee6-84dc-1e31178beae4-g-column-t-paragraph"><p><span class="first-letter">T</span>ell me, do you eat a lot of kale? I bet you do. I bet your <wbr class="w480 w960"></wbr>perfect fucking partner has you <wbr class="w481 w961 w1799"></wbr>drinking some bullshit <wbr class="w480 w960"></wbr>horrible <wbr class="w1800"></wbr>juice every morning before you leave for work.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he hilarious thing is that you and I both know that you're <wbr class="w480"></wbr>not <wbr class="w960"></wbr>a good enough person to <wbr class="w481 w961 w1799"></wbr>deserve someone looking <wbr class="w480"></wbr>after <wbr class="w1800"></wbr>you <wbr class="w960"></wbr>so carefully. You don't deserve someone loving <wbr class="w480"></wbr>you <wbr class="w481 w961 w1799"></wbr>enough <wbr class="w960"></wbr>to give you kale. You don't even deserve fresh <wbr class="w480"></wbr>vegetables.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">I</span> can tell, I can see it in your eyes. I see the way your eyes <wbr class="w480 w960"></wbr>tighten when you read what <wbr class="w481 w961 w1799"></wbr>they've accused me of, the way <wbr class="w480 w960 w1800"></wbr>your mouth twitches at one corner. I can tell you're not <wbr class="w481"></wbr>just <wbr class="w480 w960 w961 w1799"></wbr>curious, you're something more than that.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="529c605c-13cb-4317-ad3f-077dac5acdc0" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-529c605c-13cb-4317-ad3f-077dac5acdc0"><div kind="group" index="column" class="group column group column" id="u-529c605c-13cb-4317-ad3f-077dac5acdc0-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-529c605c-13cb-4317-ad3f-077dac5acdc0-g-column-t-paragraph"><p><span class="first-letter">I</span>t's not just the usual titillation either. There's something <wbr class="w480 w960"></wbr>about you that amused, and... <wbr class="w481"></wbr>and<i data-grid-id="4618840c-9dae-4771-893b-05cb11497eb9"> <wbr class="w961 w1799"></wbr>jealous</i>. That's the word. <wbr class="w480 w960"></wbr>It's a <wbr class="w1800"></wbr>sick little shadow that clings to you. The smell of a <wbr class="w480 w481"></wbr>stale <wbr class="w960"></wbr>fart <wbr class="w961 w1799"></wbr>trapped in a chair you've been sitting in for too <wbr class="w480"></wbr>long. The <wbr class="w960 w1800"></wbr>lingering sense that <wbr class="w481"></wbr>you wish it <wbr class="w961 w1799"></wbr>had been yours. <wbr class="w480"></wbr>That you <wbr class="w960"></wbr>want to know what it's like to have done the <wbr class="w480"></wbr>things <wbr class="w481"></wbr>that page <wbr class="w960 w1800"></wbr>says <wbr class="w961 w1799"></wbr>I did. That you want to know how <wbr class="w480"></wbr>thrilled you would be <wbr class="w960"></wbr>after doing them. <wbr class="w481"></wbr>That there's part <wbr class="w1799"></wbr>of <wbr class="w480 w961"></wbr>you that thinks you <wbr class="w960 w1800"></wbr>might just be turned on.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">Y</span>ou sick fuck. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>nd now you know that I know. I can see it in you. And so <wbr class="w480"></wbr>we <wbr class="w960"></wbr>both know that you don't <wbr class="w481 w961 w1799"></wbr>deserve love, you don't deserve <wbr class="w480 w960 w1800"></wbr>trust, you sure as fuck don't deserve kale smoothies.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">B</span>ut that doesn't matter. It doesn't matter now and it won't <wbr class="w480 w960"></wbr>matter then. I can't tell anyone, <wbr class="w481 w961 w1799"></wbr>and even if I did, there's <wbr class="w480 w960"></wbr>nothing <wbr class="w1800"></wbr>to actually tell. Who's going to believe the story of a <wbr class="w480 w481 w960 w961 w1799"></wbr>shadow? Who's going to listen to me? Who even fucking <wbr class="w480 w960"></wbr>cares?</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="b82ab3b7-12e4-46e6-bbdf-89016faf859c" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-b82ab3b7-12e4-46e6-bbdf-89016faf859c"><div kind="group" index="column" class="group column group column" id="u-b82ab3b7-12e4-46e6-bbdf-89016faf859c-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-b82ab3b7-12e4-46e6-bbdf-89016faf859c-g-column-t-paragraph"><p><span class="first-letter">N</span>ot even I care. You're a sick fuck. So what? Maybe if you <wbr class="w480 w960"></wbr>were the first one I'd ever <wbr class="w481 w961 w1799"></wbr>encountered that'd be interesting. <wbr class="w480 w960 w1800"></wbr>Might have even been impressive. But not now. Being <wbr class="w481 w1799"></wbr>sick <wbr class="w480 w960 w961"></wbr>isn't unique or special. Hell, it'd be way more impressive, <wbr class="w480 w960"></wbr>much, <wbr class="w1800"></wbr>much more <wbr class="w481"></wbr>frightening <wbr class="w1799"></wbr>if you <wbr class="w961"></wbr>were fucking well <wbr class="w480 w960"></wbr>adjusted or some shit like that.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>hat's something I wouldn't really know how to deal with. I <wbr class="w480 w960"></wbr>mean, what the fuck does <wbr class="w481 w961 w1799"></wbr>anybody say to a fucking normal <wbr class="w480 w960 w1800"></wbr>person? Seriously.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">N</span>ormal people, with their normal houses and their normal <wbr class="w480 w960"></wbr>cars and their normal jobs and <wbr class="w481 w961 w1799"></wbr>their normal holidays and <wbr class="w480 w960"></wbr>their <wbr class="w1800"></wbr>normal friends and their normal children and they <wbr class="w480"></wbr>might <wbr class="w481 w960"></wbr>as <wbr class="w961 w1799"></wbr>fucking well be characters in a movie, or mindless <wbr class="w480"></wbr>drones <wbr class="w960"></wbr>in a <wbr class="w1800"></wbr>video game.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">O</span>ne time, when I was still a little kid, my uncle wrote me a <wbr class="w480 w960"></wbr>book for my birthday. I'd only <wbr class="w481"></wbr>just <wbr class="w961 w1799"></wbr>learnt to read and I <wbr class="w480"></wbr>thought <wbr class="w960"></wbr>it <wbr class="w1800"></wbr>was the most amazing thing ever. My uncle wrote <wbr class="w480"></wbr>a <wbr class="w481"></wbr>book <wbr class="w960"></wbr>just <wbr class="w961 w1799"></wbr>for me! My own book! Nobody else had one like <wbr class="w480"></wbr>it! <wbr class="w960 w1800"></wbr>Incredible.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="af53f764-a971-49c4-8461-64a616246347" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-af53f764-a971-49c4-8461-64a616246347"><div kind="group" index="column" class="group column group column" id="u-af53f764-a971-49c4-8461-64a616246347-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-af53f764-a971-49c4-8461-64a616246347-g-column-t-paragraph"><p><span class="first-letter">I</span>t was called "They're going to try to make you normal" and <wbr class="w480"></wbr>it <wbr class="w960"></wbr>was all about how I <wbr class="w481"></wbr>shouldn't <wbr class="w961 w1799"></wbr>conform, how I should be <wbr class="w480 w960 w1800"></wbr>different and myself, no matter what society tried to <wbr class="w481"></wbr>make <wbr class="w480 w960"></wbr>me. I <wbr class="w961 w1799"></wbr>was too young to really understand it, but I guess I <wbr class="w480"></wbr>read <wbr class="w960"></wbr>it <wbr class="w1800"></wbr>again when I was <wbr class="w481"></wbr>older because I <wbr class="w961 w1799"></wbr>remember what it <wbr class="w480"></wbr>was <wbr class="w960"></wbr>about. I wonder what he'd think of me now?</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">I</span> wonder if he'd think all of this was his fault? Do you think <wbr class="w480 w960"></wbr>all of this is his fault? I mean, <wbr class="w481"></wbr>I <wbr class="w961 w1799"></wbr>know your sort usually <wbr class="w480"></wbr>looks <wbr class="w960 w1800"></wbr>for fucked up parental issues. If you can inject a <wbr class="w480"></wbr>touch of <wbr class="w481 w960 w961 w1799"></wbr>incest you do, after all your entire profession is for <wbr class="w480"></wbr>perverts, <wbr class="w960"></wbr>but <wbr class="w1800"></wbr>still. Do you think this is <wbr class="w481"></wbr>his <wbr class="w961 w1799"></wbr>fault?</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">F</span>or mine, I don't. I mean, if we could actually all point back <wbr class="w480"></wbr>to <wbr class="w960"></wbr>one moment in time, one <wbr class="w481 w961 w1799"></wbr>incident and say "that's the <wbr class="w480"></wbr>thing <wbr class="w960 w1800"></wbr>that made me who I am", well that'd make us all much <wbr class="w480 w481 w960 w961 w1799"></wbr>simpler creatures than we really are, wouldn't it?</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i last_chapter w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="f9af127c-50c0-4619-adf1-7e3779858205" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-f9af127c-50c0-4619-adf1-7e3779858205"><div kind="group" index="column" class="group column group column" id="u-f9af127c-50c0-4619-adf1-7e3779858205-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-f9af127c-50c0-4619-adf1-7e3779858205-g-column-t-paragraph"><p><span class="first-letter">B</span>ut it's nice to have a scapegoat waiting in the wings, just <wbr class="w480"></wbr>in <wbr class="w960"></wbr>case it becomes necessary <wbr class="w481"></wbr>to <wbr class="w961 w1799"></wbr>make use of one. Not that <wbr class="w480"></wbr>a <wbr class="w960 w1800"></wbr>scapegoat's going to work in my case. There's no grassy <wbr class="w480 w481 w960"></wbr>knoll, <wbr class="w961 w1799"></wbr>there's no hint of a second shooter. I have literally no <wbr class="w480 w960 w1800"></wbr>alibi. It turns out that sleeping <wbr class="w481"></wbr>on your <wbr class="w961 w1799"></wbr>own is really fucking <wbr class="w480 w960"></wbr>impractical if you want to be able to assure the cops you <wbr class="w480 w481 w960 w1800"></wbr>didn't do <wbr class="w961 w1799"></wbr>something. I wish I'd thought of that excuse when <wbr class="w480 w960"></wbr>mum was still trying to stop <wbr class="w481"></wbr>me bringing <wbr class="w961 w1799"></wbr>girlfriends home.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>nyway, I think that's probably the daily duty done and in <wbr class="w480"></wbr>any <wbr class="w960"></wbr>case I'm sick of you and <wbr class="w481"></wbr>this <wbr class="w961 w1799"></wbr>and me and fucking <wbr class="w480"></wbr>words for <wbr class="w960 w1800"></wbr>now. Time for my kale salad. With goat's cheese <wbr class="w480"></wbr>of <wbr class="w481"></wbr>course.</p></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_long_headline w_long_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading"><h1 kind="title" index="headline" class="long long_headline long_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-alternate-g-heading-t-headline-a">If you see no reason for <wbr class="w480"></wbr>giving thanks, the <wbr class="w481"></wbr>fault lies <wbr class="w480"></wbr>only <wbr class="w960"></wbr>in yourself feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_medium_headline w_medium_title layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_long_headline w_long_title layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-desktop-l-one-3-l-one"></div><style id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-color">body{background-color: rgba(226, 201, 162, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_medium_headline w_medium_title layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_long_headline w_long_title layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-cinema-l-one-3-l-one"></div><style id="u-fc3f5054-af0d-4e88-9b07-d0fe88afbb48-color">body{background-color: rgba(226, 201, 162, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-20
  * http://eightmedia.github.io/hammer.js
  *
@@ -1936,7 +2006,7 @@ module.exports = function() {
 
 
 },{}],5:[function(require,module,exports){
-var cache, fade, frames, hiding, highlighting, showing;
+var Hide, Show, cache, fade, frames, hiding, highlighting, showing;
 
 highlighting = showing = hiding = null;
 
@@ -1963,40 +2033,69 @@ fade = function(element, to, from) {
   return frames[element.id] = requestAnimationFrame(Frame);
 };
 
+document.body.addEventListener('mousemove', function(e) {});
+
+Hide = function(target) {
+  clearTimeout(showing);
+  setTimeout(function() {
+    if (hiding !== target) {
+      hiding.style.backgroundImage = cache[hiding.id];
+      return delete cache[hiding.id];
+    }
+  }, 300);
+  hiding = highlighting;
+  highlighting = null;
+  return fade(hiding.getElementsByTagName('img')[0], 1);
+};
+
+Show = function(target, x, y, img) {
+  var colors, value;
+  if (target !== highlighting) {
+    clearTimeout(showing);
+    showing = setTimeout(function() {
+      if (highlighting === target) {
+        return fade(img, 0.8);
+      }
+    }, 150);
+  }
+  if ((value = cache[target.id]) == null) {
+    cache[target.id] = value = window.getComputedStyle(target)['background-image'];
+  }
+  if (value.indexOf('linear-gradient') > -1) {
+    colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
+    if (colors[1].indexOf('rgba') > -1) {
+      colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
+    } else {
+      colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
+    }
+    value = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
+  } else {
+    return;
+  }
+  target.style.backgroundImage = value;
+  return highlighting = target;
+};
+
+document.body.addEventListener('click', function(e) {
+  if (highlighting) {
+    return Hide(highlighting);
+  }
+});
+
 document.body.addEventListener('mousemove', function(e) {
-  var clientX, clientY, colors, img, parent, ref, target, value;
+  var clientX, clientY, img, parent, ref, target;
   target = e.target;
   while (target) {
-    if (target.tagName === 'A' && target.classList.contains('media')) {
+    if (target.tagName === 'A' && target.classList.contains('media') && !target.classList.contains('revealed')) {
       break;
     }
     target = target.parentNode;
   }
   if (highlighting && highlighting !== target) {
-    clearTimeout(showing);
-    setTimeout(function() {
-      if (hiding !== target) {
-        hiding.style.backgroundImage = cache[hiding.id];
-        return delete cache[hiding.id];
-      }
-    }, 300);
-    hiding = highlighting;
-    highlighting = null;
-    fade(hiding.getElementsByTagName('img')[0], 1);
+    Hide(highlighting);
   }
   if (target) {
     if ((ref = (img = target.getElementsByTagName('img')[0])) != null ? ref.complete : void 0) {
-      if (target !== highlighting) {
-        clearTimeout(showing);
-        showing = setTimeout(function() {
-          if (highlighting === target) {
-            return fade(img, 0.8);
-          }
-        }, 150);
-      }
-      if ((value = cache[target.id]) == null) {
-        cache[target.id] = value = window.getComputedStyle(target)['background-image'];
-      }
       clientX = e.pageX;
       clientY = e.pageY;
       parent = target;
@@ -2005,19 +2104,7 @@ document.body.addEventListener('mousemove', function(e) {
         clientY -= parent.offsetTop;
         parent = parent.offsetParent;
       }
-      if (value.indexOf('linear-gradient') > -1) {
-        colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
-        if (colors[1].indexOf('rgba') > -1) {
-          colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
-        } else {
-          colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
-        }
-        value = 'radial-gradient(circle at ' + clientX + 'px ' + clientY + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
-      } else {
-        return;
-      }
-      target.style.backgroundImage = value;
-      return highlighting = target;
+      return Show(target, clientX, clientY, img);
     }
   }
 });
@@ -2165,11 +2252,13 @@ module.exports = function() {
 
 
 },{"./reflow":9}],8:[function(require,module,exports){
-var Player, Youtube, iframe, revealed, rgb2hex;
+var Player, Youtube, iframe, reflow, revealed, rgb2hex;
 
 iframe = null;
 
 Youtube = null;
+
+reflow = require('./reflow');
 
 Player = function(id, src, width, height, color, bg) {
   if (src.indexOf('youtube') > -1) {
@@ -2178,6 +2267,8 @@ Player = function(id, src, width, height, color, bg) {
   src = src.replace('COLOR', color).replace('BG', bg);
   if (location.protocol !== 'https:') {
     src = src.replace('https:', 'http:');
+  } else {
+    src = src.replace('http:', 'https:');
   }
   iframe = document.createElement('iframe');
   iframe.id = id;
@@ -2190,79 +2281,294 @@ Player = function(id, src, width, height, color, bg) {
   iframe.style.left = 0;
   iframe.style.right = 0;
   iframe.style.position = 'absolute';
-  iframe.style.opacity = 0.2;
+  iframe.style.opacity = 0;
   iframe.onload = function() {
-    return iframe.style.opacity = 1;
+    return iframe.showing = setTimeout(function() {
+      iframe.classList.add('loaded');
+      iframe.style.display = '';
+      iframe.showing = setTimeout(function() {
+        iframe.style.opacity = 1;
+        return iframe.showing = setTimeout(function() {
+          return typeof iframe.onloaded === "function" ? iframe.onloaded(true) : void 0;
+        }, 500);
+      }, 1);
+      return typeof iframe.onloaded === "function" ? iframe.onloaded() : void 0;
+    }, 300);
   };
   return iframe;
 };
 
 revealed = null;
 
-Player.reveal = function(iframe) {
-  var diff, i, left, len, parent, play, ref, ref1, sibling, target, top, translateX, translateY;
-  while (target = (target || iframe).parentNode) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (target.parentNode.classList.contains('group')) {
-        parent = target.parentNode;
-      } else {
-        parent = target;
+Player.findMedia = function(iframe) {
+  var i, len, media, ref, ref1, ref2, sibling;
+  if (iframe.parentNode) {
+    ref = iframe.parentNode.childNodes;
+    for (i = 0, len = ref.length; i < len; i++) {
+      sibling = ref[i];
+      if ((ref1 = sibling.classList) != null ? ref1.contains('media') : void 0) {
+        return sibling;
       }
-      revealed = iframe;
-      play = parent.getElementsByClassName('play')[0];
-      left = target.offsetWidth - play.offsetLeft - play.offsetWidth;
-      top = -play.offsetTop;
-      play.style.webkitTransformOrigin = 'top right';
-      play.style.webkitTransform = 'translateX(' + left + 'px) translateY(' + top + 'px) scale(0.5)';
-      target.classList.add('revealed');
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        if (sibling.nodeType === 1 && sibling !== parent) {
-          translateX = translateY = null;
-          if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
-            translateX = -diff;
-          }
-          if ((diff = target.offsetLeft + target.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
-            if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
-              translateX = diff;
-            }
-          }
-          if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
-            translateY = -diff;
-          }
-          if ((diff = target.offsetTop + target.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
-            if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
-              translateY = diff;
-            }
-          }
-          if (Math.abs(translateX) > Math.abs(translateY)) {
-            sibling.style.webkitTransform = 'translateY(' + translateY + 'px)';
-          } else {
-            sibling.style.webkitTransform = 'translateX(' + translateX + 'px)';
-          }
-          console.log(translateX, translateY, sibling);
-        }
+    }
+    while (media = (media || iframe).parentNode) {
+      if ((ref2 = media.classList) != null ? ref2.contains('media') : void 0) {
+        return media;
       }
     }
   }
 };
 
+Player.getClipRect = function(img, media) {
+  var rect;
+  rect = {};
+  rect.left = -img.offsetLeft;
+  rect.right = -img.offsetLeft + img.parentNode.offsetWidth;
+  rect.top = -img.offsetTop;
+  rect.bottom = img.offsetTop + img.parentNode.offsetHeight;
+  return rect;
+};
+
+Player.rect = function(rect) {
+  return 'rect(' + rect.top + 'px,' + rect.right + 'px,' + rect.bottom + 'px,' + rect.left + 'px)';
+};
+
+Player.set = function(element, property, value) {
+  var webkit;
+  webkit = 'webkit' + property.charAt(0).toUpperCase() + property.substring(1);
+  if (element.style[webkit] != null) {
+    return element.style[webkit] = value;
+  } else {
+    return element.style[property] = value;
+  }
+};
+
+Player.reveal = function(iframe, instant) {
+  var firstTime, img, layout, left, media, offsetLeft, offsetTop, parent, play, ratio, rectLeft, rectRight, ref, root, shiftLeft, stack, targetHeight, targetWidth, top, translateX, translateY, zoom;
+  iframe.style.maxHeight = window.innerHeight + 'px';
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      root = stack = media;
+      while (root = root.parentNode) {
+        if (root.classList.contains('stack')) {
+          stack = root;
+        }
+        if (root.classList.contains('layout-system')) {
+          break;
+        }
+      }
+      layout = reflow.getLayout(root, stack);
+      console.log('get layout', root, stack, layout);
+      img = media.querySelector('picture, img');
+      offsetLeft = media.offsetLeft;
+      offsetTop = media.offsetTop;
+      if (media.parentNode.classList.contains('group')) {
+        parent = media.parentNode;
+        offsetLeft += parent.offsetLeft;
+        offsetTop += parent.offsetTop;
+      } else {
+        parent = media;
+      }
+      revealed = iframe;
+      play = parent.getElementsByClassName('play')[0];
+      Player.set(play, 'transformOrigin', 'top right');
+      if (!media.classList.contains('revealed')) {
+        firstTime = true;
+        media.classList.add('revealed');
+      }
+      if (layout && (layout.offsetWidth > media.offsetWidth * 2.5 || media.offsetWidth < 350 || media.offsetHeight < 200) && iframe.src.indexOf('soundcloud') === -1) {
+        if (firstTime) {
+          Player.set(img, 'transition', 'none');
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          return requestAnimationFrame(function() {
+            Player.set(img, 'transition', '');
+            return requestAnimationFrame(function() {
+              return Player.reveal(iframe);
+            });
+          });
+        }
+        iframe.style.zIndex = 6;
+        media.classList.add('expanded');
+        translateX = -offsetLeft - stack.offsetLeft;
+        translateY = -offsetTop - stack.offsetTop;
+        if (stack.parentNode !== layout) {
+          translateX += layout.offsetLeft + layout.parentNode.offsetLeft;
+          translateY += layout.offsetTop + layout.parentNode.offsetTop;
+        }
+        Player.set(img, 'transform', img.style.transform = 'translateX(' + (translateX - img.offsetLeft) + 'px) ' + 'translateY(' + (translateY - img.offsetTop) + 'px) ');
+        if (img) {
+          Player.set(media, 'transformOrigin', 'top left');
+          Player.set(img, 'transformOrigin', 'top left');
+          ratio = img.offsetWidth / img.offsetHeight;
+          targetHeight = Math.min(layout.offsetHeight, window.innerHeight);
+          targetWidth = ratio * targetHeight;
+          console.log(layout, layout.offsetHeight, targetHeight, 44444);
+          iframe.style.left = translateX + media.offsetLeft + 'px';
+          iframe.style.top = translateY + media.offsetTop + 'px';
+          iframe.style.width = layout.offsetWidth + 'px';
+          iframe.style.height = layout.offsetHeight + 'px';
+          zoom = targetHeight / img.offsetHeight;
+          shiftLeft = (layout.offsetWidth - targetWidth) / 2;
+          rectLeft = rectRight = Math.max(0, -shiftLeft / zoom);
+          if (media.style.overflow !== 'visible') {
+            requestAnimationFrame(function() {
+              media.style.overflow = 'visible';
+              stack.style.overflow = 'visible';
+              img.style.clip = Player.rect(Player.getClipRect(img));
+              return requestAnimationFrame(function() {
+                return img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+              });
+            });
+          } else {
+            img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+          }
+          if (img.style.webkitTransform) {
+            img.style.webkitTransform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          } else if (img.style.transform) {
+            img.style.transform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          }
+          left = translateX + layout.offsetWidth - play.offsetLeft - play.offsetWidth;
+          top = translateY - play.offsetTop;
+          Player.set(play, 'transform', 'translateX(' + (left - 10) + 'px) ' + 'translateY(' + (top + 10) + 'px) ' + 'scale(0.5)');
+        }
+        stack.style.zIndex = 10;
+        if (iframe.style.opacity === 1) {
+          Player.fade(parent, true, media);
+        } else {
+          iframe.onloaded = function(full) {
+            return Player.fade(parent, full, media);
+          };
+        }
+      } else {
+        media.classList.remove('expanded');
+        left = media.offsetWidth - play.offsetLeft - play.offsetWidth;
+        top = -play.offsetTop;
+        Player.set(play, 'transform', 'translateX(' + (left - 5) + 'px) translateY(' + (top + 5) + 'px) scale(0.5)');
+        iframe.style.left = media.offsetLeft + 'px';
+        iframe.style.top = media.offsetTop + 'px';
+        iframe.style.width = media.offsetWidth + 'px';
+        iframe.style.height = media.offsetHeight + 'px';
+        if (iframe.style.opacity === 1) {
+          img.style.opacity = 0;
+        } else {
+          iframe.onloaded = function(full) {
+            console.error('ONLOADED', full);
+            if (full) {
+              return img.style.opacity = 0;
+            } else {
+              return img.style.opacity = 0.8;
+            }
+          };
+        }
+        Player.expose(parent);
+      }
+    }
+  }
+};
+
+Player.fade = function(parent, full, media) {
+  var i, len, ref, results, sibling;
+  if (media) {
+    sibling = media.querySelector('picture, img');
+    if (full) {
+      sibling.style.opacity = 0;
+    }
+  }
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME' && !sibling.classList.contains('play')) {
+      if (full) {
+        results.push(sibling.style.opacity = 0);
+      } else {
+        results.push(sibling.style.opacity = 0.8);
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
+Player.expose = function(parent) {
+  var diff, i, len, ref, results, sibling, translateX, translateY;
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME') {
+      translateX = translateY = null;
+      if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
+        translateX = -diff - 2;
+      }
+      if ((diff = parent.offsetLeft + parent.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
+        if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
+          translateX = diff + 2;
+        }
+      }
+      if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
+        translateY = -diff - 2;
+      }
+      if ((diff = parent.offsetTop + parent.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
+        if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
+          translateY = diff + 2;
+        }
+      }
+      if (Math.abs(translateX) > Math.abs(translateY)) {
+        results.push(Player.set(sibling, 'transform', 'translateY(' + translateY + 'px)'));
+      } else {
+        results.push(Player.set(sibling, 'transform', 'translateX(' + translateX + 'px)'));
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
 Player.hide = function(iframe) {
-  var i, len, parent, play, ref, ref1, sibling;
-  while (parent = (parent || iframe).parentNode) {
-    if ((ref = parent.classList) != null ? ref.contains('revealed') : void 0) {
-      parent.classList.remove('revealed');
+  var child, i, img, j, len, len1, media, parent, play, ref, ref1, ref2, ref3, sibling;
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('revealed') : void 0) {
+      media.classList.remove('revealed');
+      media.classList.remove('expanded');
+      Player.set(media, 'transform', '');
+      if (img = media.querySelector('picture, img')) {
+        img.style.zIndex = '';
+        img.style.opacity = '';
+        if (media.style.overflow === 'visible') {
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          setTimeout(function() {
+            img.style.clip = '';
+            return media.style.overflow = '';
+          }, 300);
+        }
+      }
+      ref1 = media.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        child = ref1[i];
+        Player.set(child, 'transform', '');
+      }
+      parent = media;
       if (parent.parentNode.classList.contains('group')) {
         parent = parent.parentNode;
       }
       play = parent.getElementsByClassName('play')[0];
-      play.style.webkitTransform = '';
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        sibling.style.webkitTransform = '';
+      play.style.zIndex = '';
+      Player.set(play, 'transform', '');
+      ref2 = parent.parentNode.childNodes;
+      for (j = 0, len1 = ref2.length; j < len1; j++) {
+        sibling = ref2[j];
+        if (sibling.nodeType === 1 && sibling !== iframe) {
+          Player.set(sibling, 'transform', '');
+          sibling.style.opacity = '';
+        }
       }
+      if (!((ref3 = (parent = parent.parentNode).classList) != null ? ref3.contains('stack') : void 0)) {
+        parent = parent.parentNode;
+      }
+      parent.style.zIndex = '';
+      parent.style.visible = '';
     }
   }
   return revealed = null;
@@ -2286,29 +2592,32 @@ Player.stop = function(iframe) {
   var old;
   old = iframe;
   iframe.style.opacity = 0;
+  iframe.style.width = iframe.offsetWidth + 'px';
+  iframe.style.height = iframe.offsetHeight + 'px';
   setTimeout(function() {
     var ref;
     return (ref = old.parentNode) != null ? ref.removeChild(old) : void 0;
   }, 300);
+  clearTimeout(iframe.showing);
   Player.hide(iframe);
   return iframe = null;
 };
 
 document.addEventListener('click', function(e) {
-  var bg, color, header, parent, play, ref, ref1, results, styles, target;
-  target = e.target;
+  var bg, color, header, media, parent, play, ref, ref1, results, styles;
+  media = e.target;
   results = [];
-  while (target) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (play = target.getElementsByClassName('play')[0]) {
-        if ((iframe != null ? iframe.parentNode : void 0) === target) {
+  while (media) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      if (play = media.getElementsByClassName('play')[0]) {
+        if ((iframe != null ? iframe.parentNode : void 0) === media || (iframe != null ? iframe.parentNode : void 0) === media.parentNode) {
           Player.stop(iframe);
         } else {
           if (iframe) {
             Player.stop(iframe);
           }
           color = bg = null;
-          header = (ref1 = target.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
+          header = (ref1 = media.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
           parent = header || play;
           while (parent) {
             if (parent.nodeType === 1) {
@@ -2327,14 +2636,14 @@ document.addEventListener('click', function(e) {
             parent = parent.parentNode;
           }
           iframe = Player(play.id + '-player', play.getAttribute('data-src'), play.getAttribute('data-width'), play.getAttribute('data-height'), rgb2hex(color), rgb2hex(bg));
-          target.appendChild(iframe);
+          media.parentNode.insertBefore(iframe, media);
           Player.reveal(iframe);
         }
         e.preventDefault();
         break;
       }
     }
-    results.push(target = target.parentNode);
+    results.push(media = media.parentNode);
   }
   return results;
 });
@@ -2349,7 +2658,7 @@ rgb2hex = function(rgb) {
 window.exports = window.Player = Player;
 
 
-},{}],9:[function(require,module,exports){
+},{"./reflow":9}],9:[function(require,module,exports){
 module.exports = {
   reflow: function(container) {
     var counter, heights, hidden, hole, holed, holes, i, id, ids, index, j, k, l, last, layout, layouts, len, len1, len2, len3, m, mutations, name, node, ref, ref1, ref2, stack, stacks;
